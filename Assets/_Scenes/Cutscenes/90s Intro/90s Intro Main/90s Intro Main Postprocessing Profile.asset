@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1976024543848519895
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cf8f3a6181c0a45ae8bdcae4651f1d, type: 3}
+  m_Name: Scanlines
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.61
+  noise:
+    m_OverrideState: 1
+    m_Value: 0.231
+  count:
+    m_OverrideState: 1
+    m_Value: 845
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: 90s Intro Main Postprocessing Profile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -1976024543848519895}
+  - {fileID: 3587867463516789210}
+  - {fileID: 3967544307097884487}
+  - {fileID: 4283118474649395313}
+--- !u!114 &3587867463516789210
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b0c89a5cf8bc43b8e26856e772439, type: 3}
+  m_Name: Distort
+  m_EditorClassIdentifier: 
+  active: 1
+  speed:
+    m_OverrideState: 1
+    m_Value: 7.48
+  amplitude:
+    m_OverrideState: 1
+    m_Value: 0.0065
+  fractionX:
+    m_OverrideState: 0
+    m_Value: 50
+  fractionY:
+    m_OverrideState: 0
+    m_Value: 25
+--- !u!114 &3967544307097884487
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79863c88852b02a45b0f118843b4be60, type: 3}
+  m_Name: ScreenFuzz
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.05
+--- !u!114 &4283118474649395313
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac1e3883a2d48245aa5c6852e614928, type: 3}
+  m_Name: ScreenGlitch
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  speed:
+    m_OverrideState: 1
+    m_Value: 0
+  xDisplacement:
+    m_OverrideState: 1
+    m_Value: 0
+  randomInferencePower:
+    m_OverrideState: 1
+    m_Value: 0
+  linePower:
+    m_OverrideState: 1
+    m_Value: 0
+  colorLerp:
+    m_OverrideState: 1
+    m_Value: 0
