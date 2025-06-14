@@ -8,12 +8,15 @@ public class FadeByTime : MonoBehaviour
     public float fadeOutTime;
 
     public Color fadeColor;
+
+    Material meshMaterial;
     Color startColor;
     Color newColor;
 
     private void Start()
     {
-        startColor = GetComponentInChildren<MeshRenderer>().material.color;
+        meshMaterial = GetComponentInChildren<MeshRenderer>().material;
+        startColor = meshMaterial.color;
     }
 
     private void OnEnable()
@@ -23,7 +26,7 @@ public class FadeByTime : MonoBehaviour
 
     private void OnDisable()
     {
-        GetComponentInChildren<MeshRenderer>().material.color = startColor;
+        meshMaterial.color = startColor;
     }
 
     IEnumerator FadeWait()
@@ -39,9 +42,9 @@ public class FadeByTime : MonoBehaviour
         float timeElapsed = 0;
         while(timeElapsed < fadeOutTime)
         {
-            newColor.a = Mathf.Lerp(startColor.a, fadeColor.a, timeElapsed);
+            newColor.a = Mathf.Lerp(startColor.a, fadeColor.a, timeElapsed / fadeOutTime);
             timeElapsed += Time.deltaTime;
-            GetComponentInChildren<MeshRenderer>().material.color = newColor;
+            meshMaterial.color = newColor;
             yield return null;
         }
 

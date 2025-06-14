@@ -3,7 +3,37 @@ guid: 206f4507e5f90524089cb95fbd006a59
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lorenzo Show
+    second: {fileID: 2100000, guid: be2c9ae3179fe734284331cd42259375, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ron Jeans Big.001
+    second: {fileID: 2100000, guid: b0fbca2dac491384c94b5a5e65785ae5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ron Jorts big
+    second: {fileID: 2100000, guid: e7770badcec87a94489b855ea3d8f436, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ron belt big.002
+    second: {fileID: 2100000, guid: b6f8b567ebdf07c4ea60e775374c69f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ron belt loops big.002
+    second: {fileID: 2100000, guid: 81da6e40a18701d479a4002b49515d8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ron buckle big.002
+    second: {fileID: 2100000, guid: 246b11f86aee84544981ca93f9bc50ae, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -69,7 +99,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0

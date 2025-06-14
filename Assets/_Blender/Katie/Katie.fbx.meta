@@ -42,6 +42,21 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Jorts Zombie
+    second: {fileID: 2100000, guid: a95d8557a2a83f54cbfa0482fc35619e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Katie Head
+    second: {fileID: 2100000, guid: cc568fd02426c884686d918ccb4347c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh
+    second: {fileID: 2100000, guid: 4e3d189ed0c6a4b44ab117c67c3998b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Tanktop
     second: {fileID: 2100000, guid: bcb84a4423cf4294fb264b4861e97f1c, type: 2}
   - first:
@@ -59,6 +74,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Tongue
     second: {fileID: 2100000, guid: b2a88b530361ab147a079dd359e80881, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Zombie Body
+    second: {fileID: 2100000, guid: 72f213d7d72284443974aa1ae83d0396, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Zombie Tanktop
+    second: {fileID: 2100000, guid: 2d126a765b9ca934da61ee1eb152f9e0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -144,7 +169,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0

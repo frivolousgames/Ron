@@ -20,16 +20,16 @@ public class PlayerInfo : MonoBehaviour
     int punisherID = 7;
     int uziID = 8;
 
-    public static float[] weaponPower;
+    public static int[] weaponPower;
 
-    float fistsPower = .4f;
-    float butcherKnifePower = 1;
-    float revolverPower = 2;
-    float shotgunPower = 4;
-    float reamerPower = 1.7f;
-    float acousticPower = 1.2f;
-    float punisherPower = .2f;
-    float uziPower = 1f;
+    int fistsPower = 3;
+    int butcherKnifePower = 5;
+    int revolverPower = 7;
+    int shotgunPower = 10;
+    int reamerPower = 6;
+    int acousticPower = 7;
+    int punisherPower = 1;
+    int uziPower = 4;
 
     public static float[] shootWait;
 
@@ -142,6 +142,20 @@ public class PlayerInfo : MonoBehaviour
     bool punisherHasDildo = true;
     bool uziHasDildo = false;
 
+    //Vehicle Guns
+
+    public static int[] vehicleWeaponID;
+
+    int gummyAirplaneGun = 1;
+
+    public static int[] vehicleWeaponPower;
+
+    int gummyAirplaneGunPower = 1;
+
+    public static float[] vehicleWeaponShootWait;
+
+    float gummyAirplaneGunShootWait = .2f;
+
 
     private void Awake()
     {
@@ -156,7 +170,7 @@ public class PlayerInfo : MonoBehaviour
             punisherID,
             uziID
         };
-        weaponPower = new float[]
+        weaponPower = new int[]
         {
             fistsPower,
             butcherKnifePower,
@@ -283,6 +297,21 @@ public class PlayerInfo : MonoBehaviour
             acousticHasDildo,
             punisherHasDildo,
             uziHasDildo
+        };
+
+        vehicleWeaponID = new int[]
+        {
+            gummyAirplaneGun
+        };
+
+        vehicleWeaponPower = new int[]
+        {
+            gummyAirplaneGunPower
+        };
+
+        vehicleWeaponShootWait = new float[]
+        {
+            gummyAirplaneGunShootWait
         };
     }
 }

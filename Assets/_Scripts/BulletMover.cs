@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class BulletMover : MonoBehaviour
 {
@@ -9,17 +8,34 @@ public class BulletMover : MonoBehaviour
     public float bulletSpeed;
     Vector3 startPos;
 
-    public GameObject[] dust;
+    GameObject[] dust;
     Vector3 hitPoint;
 
-    public GameObject[] bulletHoles;
+    GameObject[] bulletHoles;
 
-    public GameObject[] bloodHits;
+    GameObject[] bloodHits;
+    GameObject[] chunkHits;
     Vector3 hitNormal;
+
+    Vector3 spawnOffset;
+    GameObject spawnedPool;
+
+    [SerializeField]
+    int damageAmount;
+
+    ObjectPooler pooler;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        spawnOffset = new Vector3(0f, 0f, -.5f);
+
+        bloodHits = PooledObjectArrays.bloodHitsArray;
+        chunkHits = PooledObjectArrays.chunkHitsArray;
+        bulletHoles = PooledObjectArrays.bulletHolesArray;
+        dust = PooledObjectArrays. bulletDustArray;
+
+        pooler = new ObjectPooler();
     }
 
     private void FixedUpdate()
@@ -48,29 +64,20 @@ public class BulletMover : MonoBehaviour
         if (other.gameObject.layer == 11 || other.gameObject.layer == 6)
         {
             //offset = other.ClosestPointOnBounds(transform.position);
-            PoolObjects(dust, hitPoint, transform.rotation);
-            PoolObjects(bulletHoles, hitPoint + hitNormal * Random.Range(.0001f, .0009f), Quaternion.LookRotation(hitNormal));
+            pooler.PoolObjects(dust, hitPoint, transform.rotation, spawnOffset);
+            pooler.PoolObjects(bulletHoles, hitPoint + hitNormal * Random.Range(.0001f, .0009f), Quaternion.LookRotation(hitNormal), spawnOffset);
             gameObject.SetActive(false);
         }
         if(other.gameObject.layer == 12)
         {
-            PoolObjects(bloodHits, hitPoint - other.gameObject.transform.position * Random.Range(.0001f, .0009f), Quaternion.LookRotation(hitNormal));
+            pooler.PoolObjects(bloodHits, hitPoint - other.gameObject.transform.position * Random.Range(.0001f, .0009f), Quaternion.LookRotation(hitNormal), spawnOffset);
             gameObject.SetActive(false);
         }
 
-    }
-
-    public void PoolObjects(GameObject[]objs, Vector3 pos, Quaternion rot)
-    {
-        foreach (GameObject o in objs)
+        if (other.gameObject.layer == 13)
         {
-            if (!o.activeInHierarchy)
-            {
-                o.SetActive(true);
-                o.transform.position = pos;
-                o.transform.rotation = rot;
-                break;
-            }
+            pooler.PoolObjects(chunkHits, hitPoint - other.gameObject.transform.position  * Random.Range(.0001f, .0009f), Quaternion.LookRotation(hitNormal), spawnOffset);
+            gameObject.SetActive(false);
         }
     }
 }

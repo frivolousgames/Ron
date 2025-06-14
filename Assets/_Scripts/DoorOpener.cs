@@ -9,7 +9,7 @@ public class DoorOpener : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.CompareTag("Player"))
         {
             currentDoor = gameObject;
             doorTriggered = true;
@@ -18,7 +18,7 @@ public class DoorOpener : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
             doorTriggered = false;
         }

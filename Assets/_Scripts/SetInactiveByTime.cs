@@ -11,6 +11,11 @@ public class SetInactiveByTime : MonoBehaviour
         StartCoroutine(SetInactive());
     }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     IEnumerator SetInactive()
     {
         yield return new WaitForSeconds(delayTime);

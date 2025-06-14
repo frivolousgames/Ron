@@ -87,11 +87,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_1:
-        m_Texture: {fileID: 2800000, guid: 5da308b43b1e0a9478f17b2a909100dc, type: 3}
+        m_Texture: {fileID: 2800000, guid: c96dd062720ce354192c72b863f9e728, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_2:
-        m_Texture: {fileID: 2800000, guid: be76cba2e5b18b2429835b9b4f246fe1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5da308b43b1e0a9478f17b2a909100dc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -111,11 +111,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_1:
-        m_Texture: {fileID: 2800000, guid: 643d591b44edf7f408d708b3237a0363, type: 3}
+        m_Texture: {fileID: 2800000, guid: c155e1590b272e14d839dbff2320c835, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_2:
-        m_Texture: {fileID: 2800000, guid: c663c98ee67df604484e2d7232c6c065, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ThicknessMap:
@@ -214,8 +214,8 @@ Material:
     - _Mode: 0
     - _NormalMapSpace: 0
     - _NormalScale: 1
-    - _Normal_Strength_1: 1
-    - _Normal_Strength_2: 0.59
+    - _Normal_Strength_1: 0.32
+    - _Normal_Strength_2: 1
     - _ObjectSpaceUVMapping: 0
     - _ObjectSpaceUVMappingEmissive: 0
     - _OcclusionStrength: 1
@@ -293,12 +293,12 @@ Material:
     - _Normal_Offset_1: {r: 0, g: 0, b: 0, a: 0}
     - _Normal_Offset_2: {r: 0, g: 0, b: 0, a: 0}
     - _Normal_Tiling_1: {r: 1, g: 1, b: 0, a: 0}
-    - _Normal_Tiling_2: {r: 60, g: 60, b: 0, a: 0}
+    - _Normal_Tiling_2: {r: 1, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _Texture_Offset_1: {r: 0, g: 0, b: 0, a: 0}
     - _Texture_Offset_2: {r: 0, g: 0, b: 0, a: 0}
     - _Texture_Tiling_1: {r: 1, g: 1, b: 0, a: 0}
-    - _Texture_Tiling_2: {r: 60, g: 60, b: 0, a: 0}
+    - _Texture_Tiling_2: {r: 1, g: 1, b: 0, a: 0}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}

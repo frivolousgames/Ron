@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class ButlerController : NpcController
@@ -33,7 +31,7 @@ public class ButlerController : NpcController
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "PlayerWeapon")
+        if(other.gameObject.CompareTag("PlayerWeapon"))
         {
             if (!isHit)
             {
@@ -48,7 +46,7 @@ public class ButlerController : NpcController
                 }
             }
         }
-        if (other.gameObject.tag == "SpringWeapon")
+        if (other.gameObject.CompareTag("SpringWeapon"))
         {
             if (isCowering)
             {

@@ -15,50 +15,10 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: 54
+    m_Value: 35
   tint:
     m_OverrideState: 0
     m_Value: 29
---- !u!114 &-6979306911352145264
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7649d9368d3a5c4ab8ad01a63e04962, type: 3}
-  m_Name: ChannelMixer
-  m_EditorClassIdentifier: 
-  active: 1
-  redOutRedIn:
-    m_OverrideState: 1
-    m_Value: 82
-  redOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 8
-  redOutBlueIn:
-    m_OverrideState: 1
-    m_Value: 8
-  greenOutRedIn:
-    m_OverrideState: 1
-    m_Value: -10
-  greenOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 110
-  greenOutBlueIn:
-    m_OverrideState: 1
-    m_Value: 8
-  blueOutRedIn:
-    m_OverrideState: 1
-    m_Value: -12
-  blueOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 71
-  blueOutBlueIn:
-    m_OverrideState: 1
-    m_Value: 116
 --- !u!114 &-6140697462009075132
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -83,7 +43,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.286
+    m_Value: 0.31
   smoothness:
     m_OverrideState: 1
     m_Value: 0.329
@@ -117,7 +77,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.261
+    m_Value: 0.29
   response:
     m_OverrideState: 1
     m_Value: 0.724
@@ -148,7 +108,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 12.156689
+    m_Value: 14.156881
   compensation:
     m_OverrideState: 0
     m_Value: 0
@@ -301,14 +261,14 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   nearFocusStart:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   nearFocusEnd:
-    m_OverrideState: 1
-    m_Value: 0.73
+    m_OverrideState: 0
+    m_Value: 0.00001
   farFocusStart:
     m_OverrideState: 1
-    m_Value: 45.37
+    m_Value: 17.98
   farFocusEnd:
     m_OverrideState: 0
     m_Value: 102.41001
@@ -316,14 +276,14 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 5
   m_NearMaxBlur:
-    m_OverrideState: 1
-    m_Value: 1.6
+    m_OverrideState: 0
+    m_Value: 8
   m_FarSampleCount:
     m_OverrideState: 1
-    m_Value: 16
+    m_Value: 6
   m_FarMaxBlur:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 9.1
   m_Resolution:
     m_OverrideState: 1
     m_Value: 2
@@ -348,13 +308,13 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9538079, z: 0.93889713, w: 0}
+    m_Value: {x: 1, y: 0.99415815, z: 0.942142, w: 0.01808311}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.99050546, z: 0.9891321, w: 0}
+    m_Value: {x: 0.99486005, y: 0.9313362, z: 1, w: 0.01808332}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 0.9146419, y: 0.9832514, z: 1, w: 0.016597511}
+    m_Value: {x: 0.9394097, y: 1, z: 0.9301894, w: 0.037823174}
 --- !u!114 &-1836180972661832151
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -376,13 +336,13 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 2.82
+    m_Value: 2.13
   directLightingStrength:
     m_OverrideState: 1
-    m_Value: 0.8
+    m_Value: 0.22
   radius:
     m_OverrideState: 1
-    m_Value: 1.04
+    m_Value: 2.37
   spatialBilateralAggressiveness:
     m_OverrideState: 0
     m_Value: 0.15
@@ -457,12 +417,12 @@ MonoBehaviour:
     m_Value: 0.9
   intensity:
     m_OverrideState: 1
-    m_Value: 0.193
+    m_Value: 0.068
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
   tint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   dirtTexture:
     m_OverrideState: 0
@@ -505,7 +465,6 @@ MonoBehaviour:
   - {fileID: 2432979139181870164}
   - {fileID: -1903660874957599157}
   - {fileID: -3674792269501549578}
-  - {fileID: -6979306911352145264}
   - {fileID: 7850444836575264136}
 --- !u!114 &2432979139181870164
 MonoBehaviour:
@@ -522,13 +481,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.89811796, z: 0.8923084, w: 0.016597511}
+    m_Value: {x: 0.880202, y: 0.8743489, z: 1, w: 0.16903652}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 0.9435058, y: 1, z: 0.83224624, w: 0.066390045}
+    m_Value: {x: 1, y: 0.96391743, z: 0.94089866, w: 0.035902243}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.92486006, z: 0.8025996, w: 0.033195022}
+    m_Value: {x: 1, y: 0.99228144, z: 0.9529737, w: 0.09041594}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -553,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598e2d32e2c7b0c418e030c3236d663a, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   quality:
     m_OverrideState: 0
     m_Value: 1

@@ -42,7 +42,7 @@ public class PunisherController : MonoBehaviour
 
         //Shoot();
 
-        Debug.Log("IsShooting: " + isShooting);
+        //Debug.Log("IsShooting: " + isShooting);
     }
 
     private void FixedUpdate()
@@ -61,7 +61,7 @@ public class PunisherController : MonoBehaviour
     private void OnEnable()
     {
         shootWait = PlayerInfo.shootWait[PlayerController.currentWeapon];
-        Debug.Log("ShootWait: " + shootWait);
+        //Debug.Log("ShootWait: " + shootWait);
     }
 
     public void Thriust()

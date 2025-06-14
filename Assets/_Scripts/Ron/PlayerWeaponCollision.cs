@@ -4,21 +4,41 @@ using UnityEngine;
 
 public class PlayerWeaponCollision : MonoBehaviour
 {
-    BoxCollider hitCollider;
-    BulletMover bm;
+    Collider hitCollider;
 
-    public GameObject[] bloodHits;
+    GameObject[] bloodHits;
     public Transform bloodSpawn;
+
+    GameObject[] chunkHits;
+
+    public Vector3 spawnOffset;
+
+    [SerializeField]
+    int damageAmount;
+
+    ObjectPooler pooler;
+
     private void Awake()
     {
-        bm = new BulletMover();
+
+        bloodHits = PooledObjectArrays.bloodHitsArray;
+        chunkHits = PooledObjectArrays.chunkHitsArray;
+
+
+        pooler = new ObjectPooler();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.layer == 12)
         {
-            bm.PoolObjects(bloodHits, bloodSpawn.position, Quaternion.identity);
+            //Vector3 spawnPos = other.ClosestPoint(bloodSpawn.position - new Vector3(other.gameObject.transform.position.x, 0f, other.gameObject.transform.position.z));\
+            Vector3 spawnPos = other.ClosestPoint(bloodSpawn.position);
+            pooler.PoolObjects(bloodHits, spawnPos, Quaternion.identity, spawnOffset);
+        }
+        if (other.gameObject.layer == 13)
+        {
+            pooler.PoolObjects(chunkHits, bloodSpawn.position, Quaternion.identity, spawnOffset);
         }
     }
 }
