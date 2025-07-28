@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Budidas
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Budidas
+  itemGenre: Clothing
+  itemType: Shoes
+  itemSubType: Low Top Sneakers
+  itemCollection: Budidas
+  itemDescription: I wear these when I'm kickin' it with my crew. Or when I go to
+    the bank or something.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 9352b1e55b5286e45a7dd869838c4533, type: 3}
+  itemObjectName: shoes lo
+  itemObjectTag: Shoes
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 1664412ed8cbf794997ff22827fc30da, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: 9352b1e55b5286e45a7dd869838c4533, type: 3}
+  - {fileID: 21300000, guid: 0531b4005de80b0418f4f621103248cd, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: 1664412ed8cbf794997ff22827fc30da, type: 2}
+  - {fileID: 2100000, guid: 24e37f70ffddcde41b0386467f6c0504, type: 2}

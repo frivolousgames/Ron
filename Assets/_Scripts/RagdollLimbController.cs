@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RagdollLimbController : MonoBehaviour
+public class UnderwaterGutsController : MonoBehaviour
 {
     [SerializeField]
     Rigidbody[] boneRb;

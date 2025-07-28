@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Pittsburgh Steamers
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Pittsburgh Steamers
+  itemGenre: Clothing
+  itemType: Shirts
+  itemSubType: Short Sleeve Jersey
+  itemCollection: 
+  itemDescription: This is definitely their year.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 494b7af2facc96f4e94763d330b96933, type: 3}
+  itemObjectName: Tshirt 2 Sided
+  itemObjectTag: Shirt
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: b565d1bfb5191f849a456bd56e3287dc, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: 494b7af2facc96f4e94763d330b96933, type: 3}
+  - {fileID: 21300000, guid: a8496a8984f93e449bd14e69ec9b2a7b, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: b565d1bfb5191f849a456bd56e3287dc, type: 2}
+  - {fileID: 2100000, guid: f01a58214b7d9ce4abf35f7036ff4dcf, type: 2}
+  hasAccessories: 0
+  accessoryObjects: []
+  isTuckable: 1

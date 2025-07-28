@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Terminators
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Terminator
+  itemGenre: Clothing
+  itemType: Glasses
+  itemSubType: Sunglasses
+  itemCollection: 
+  itemDescription: Put these on if you wanna live. Or just look badass.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 0cd4b0c0d99a7804b966f06bc56f8b69, type: 3}
+  itemObjectName: Terminators
+  itemObjectTag: Glasses
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 1df463cda7c9a8a45930f08c4d26ae56, type: 2}
+  - {fileID: 2100000, guid: e2881c89d7e58894f8f9df5802168f3b, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: 0cd4b0c0d99a7804b966f06bc56f8b69, type: 3}
+  - {fileID: 21300000, guid: 953349e8cf06f704ebae71ac1dea59fa, type: 3}
+  - {fileID: 21300000, guid: f676302f32941644eb224015fd3f67ce, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: 1df463cda7c9a8a45930f08c4d26ae56, type: 2}
+  - {fileID: 2100000, guid: e2881c89d7e58894f8f9df5802168f3b, type: 2}
+  - {fileID: 2100000, guid: 1df463cda7c9a8a45930f08c4d26ae56, type: 2}
+  - {fileID: 2100000, guid: d33b432dd9e637947a3411b9cc7f61d6, type: 2}
+  - {fileID: 2100000, guid: 1df463cda7c9a8a45930f08c4d26ae56, type: 2}
+  - {fileID: 2100000, guid: db3b5886daa46a0409200724fb59c27c, type: 2}

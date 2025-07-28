@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Visor_Pyrites_BlackYellow
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Pittsburgh Pyrites Black & Yellow
+  itemGenre: Clothing
+  itemType: Hats
+  itemSubType: Visor
+  itemCollection: 
+  itemDescription: Gift this to someone you hate.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 83e22b4ea675abb4790c525bc2e0990d, type: 3}
+  itemObjectName: Visor
+  itemObjectTag: Hat
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 616b4fd588c69f745bd3adbadc7d858e, type: 2}
+  - {fileID: 2100000, guid: 0221d55bde44cdd41a13f183e937ffd5, type: 2}
+  hasVariations: 0
+  variationColors: []
+  variationPics: []
+  variationMats: []

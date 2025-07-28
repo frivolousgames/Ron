@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Baseball_Boobies
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Show Me Your Boobies Hat
+  itemGenre: Clothing
+  itemType: Hats
+  itemSubType: Baseball Hat
+  itemCollection: Boobs
+  itemDescription: Perfect for a day at the beach. Who knows, maybe you'll get lucky.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 6929d46f008bbeb43af59e266cb6d4fc, type: 3}
+  itemObjectName: Baseball Hat
+  itemObjectTag: Hat
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: e03b78b5b0c749e42bc2b2cbe9835461, type: 2}
+  - {fileID: 2100000, guid: 801b88ec984b4004ea1511c32de007b1, type: 2}
+  hasVariations: 0
+  variationColors: []
+  variationPics: []
+  variationMats: []

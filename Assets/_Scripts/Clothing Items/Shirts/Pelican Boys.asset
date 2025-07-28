@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Pelican Boys
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Pelican Boys
+  itemGenre: Clothing
+  itemType: Shirts
+  itemSubType: Short Sleeve Shirt
+  itemCollection: 
+  itemDescription: Shirt for the popular new wave band that kicks ass.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 41e978d12403e394392525ce0bedab09, type: 3}
+  itemObjectName: Generic T-Shirt
+  itemObjectTag: Shirt
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: a11a4d4d1a46cf7448be3c4bb7a97c1d, type: 2}
+  hasVariations: 0
+  variationColors: []
+  variationPics: []
+  variationMats: []
+  hasAccessories: 0
+  accessoryObjects: []
+  isTuckable: 1

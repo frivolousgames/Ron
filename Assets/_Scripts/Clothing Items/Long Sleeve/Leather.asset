@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Leather
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Leather
+  itemGenre: Clothing
+  itemType: Shirts
+  itemSubType: Jacket
+  itemCollection: 
+  itemDescription: It's actually pleather but you can't tell the difference.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: e6d6f7d53b7292646a1aad70ab7b0251, type: 3}
+  itemObjectName: Long Sleeve Collared Shirt
+  itemObjectTag: Shirt
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: d6e7bcad00fb7a541be5056c44956c0d, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.5377358, g: 0.35565436, b: 0.2663314, a: 1}
+  - {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+  - {r: 0.5943396, g: 0.047659315, b: 0.1147955, a: 1}
+  - {r: 0.6981132, g: 0.6022873, b: 0.3786935, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: e6d6f7d53b7292646a1aad70ab7b0251, type: 3}
+  - {fileID: 21300000, guid: 043f4541f871e234dab3a0201afe8051, type: 3}
+  - {fileID: 21300000, guid: 9fe9c77efc72e8e4abf230f441d38d18, type: 3}
+  - {fileID: 21300000, guid: 5b6e3dfcda635a8448461775bc3eb4fa, type: 3}
+  - {fileID: 21300000, guid: 8d3e774246ac0b5408e52242f8bb3501, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: d6e7bcad00fb7a541be5056c44956c0d, type: 2}
+  - {fileID: 2100000, guid: c0919a0516b80244d9ceb2d941dcbcd3, type: 2}
+  - {fileID: 2100000, guid: 519e558642d702442ae1c77f9da79b08, type: 2}
+  - {fileID: 2100000, guid: e166950f6b3d98c4ab9471536e4aa4e2, type: 2}
+  - {fileID: 2100000, guid: 01f3da5b52393214e94166d32d63eb5b, type: 2}

@@ -147,15 +147,17 @@ public class PlayerInfo : MonoBehaviour
     public static int[] vehicleWeaponID;
 
     int gummyAirplaneGun = 1;
+    int spermGun = 2;
 
     public static int[] vehicleWeaponPower;
-
+    
     int gummyAirplaneGunPower = 1;
+    int spermGunPower = 1;
 
     public static float[] vehicleWeaponShootWait;
 
     float gummyAirplaneGunShootWait = .2f;
-
+    float spermGunShootWait = .2f;
 
     private void Awake()
     {
@@ -301,17 +303,20 @@ public class PlayerInfo : MonoBehaviour
 
         vehicleWeaponID = new int[]
         {
-            gummyAirplaneGun
+            gummyAirplaneGun,
+            spermGun
         };
 
         vehicleWeaponPower = new int[]
         {
-            gummyAirplaneGunPower
+            gummyAirplaneGunPower,
+            spermGunPower
         };
 
         vehicleWeaponShootWait = new float[]
         {
-            gummyAirplaneGunShootWait
+            gummyAirplaneGunShootWait,
+            spermGunShootWait
         };
     }
 }

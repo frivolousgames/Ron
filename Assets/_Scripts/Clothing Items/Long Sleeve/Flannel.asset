@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Flannel
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Flannel
+  itemGenre: Clothing
+  itemType: Shirts
+  itemSubType: Long Sleeve Shirt
+  itemCollection: 
+  itemDescription: Wear it or tie it around your waist.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: f9bd7072b30e00b418d5dbfdb0a2b42e, type: 3}
+  itemObjectName: Long Sleeve Collared Shirt
+  itemObjectTag: Shirt
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 4b3fd4aa98ab5e243840ec51bbf11ed9, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.2466259, b: 1, a: 1}
+  - {r: 1, g: 0.56976885, b: 0, a: 1}
+  - {r: 0.7811141, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.81251574, a: 1}
+  - {r: 0.9907571, g: 1, b: 0, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: f9bd7072b30e00b418d5dbfdb0a2b42e, type: 3}
+  - {fileID: 21300000, guid: 61e68ac1731851749b00745886c703e7, type: 3}
+  - {fileID: 21300000, guid: 2b0d8ab7756c63e48ad5c4abc8b0d143, type: 3}
+  - {fileID: 21300000, guid: ccd8df3e4c77c6143a6641423a23574a, type: 3}
+  - {fileID: 21300000, guid: 6fc4de5ef886e6f4d9f38244c3919932, type: 3}
+  - {fileID: 21300000, guid: c9b2d15083ffbb040a554b9b6861516c, type: 3}
+  - {fileID: 21300000, guid: e8997ad7edbe1d44cac57a6279cb3f81, type: 3}
+  - {fileID: 21300000, guid: 0569748b8fd13574ea4d3529a9163fbc, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: 4b3fd4aa98ab5e243840ec51bbf11ed9, type: 2}
+  - {fileID: 2100000, guid: ab3482767bce5654b93817990f616aa0, type: 2}
+  - {fileID: 2100000, guid: 234ece43e8956bb48bd3b66f3919de81, type: 2}
+  - {fileID: 2100000, guid: 7a0880e95cec8084ea75215d8f2d9510, type: 2}
+  - {fileID: 2100000, guid: ba301ddd95aad964388be53592870df1, type: 2}
+  - {fileID: 2100000, guid: 17724edd230bbfd40bf541dc151801ab, type: 2}
+  - {fileID: 2100000, guid: e89a6d6236796964a99a4debc08bbfad, type: 2}
+  - {fileID: 2100000, guid: 81a7392dccd1dcd4ebd292092e6c1018, type: 2}
+  hasAccessories: 0
+  accessoryObjects: []
+  isTuckable: 1

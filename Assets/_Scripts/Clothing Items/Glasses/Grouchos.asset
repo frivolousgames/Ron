@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Grouchos
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Groucho
+  itemGenre: Clothing
+  itemType: Glasses
+  itemSubType: Joke Glasses
+  itemCollection: 
+  itemDescription: These things are hilarious. I wore them to church once and Katie
+    got really pissed it was awesome.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 86cf5203dedf2474f860d50666841dd5, type: 3}
+  itemObjectName: Fake Nose Glasses
+  itemObjectTag: Glasses
+  itemArmorBonus: 1
+  itemMats: []
+  hasVariations: 0
+  variationColors: []
+  variationPics: []
+  variationMats: []

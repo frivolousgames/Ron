@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Visor_90s
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: 90s
+  itemGenre: Clothing
+  itemType: Hats
+  itemSubType: Visor
+  itemCollection: 90s
+  itemDescription: This hat is da bomb.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: c5e06dd500f293c4ca153e040d0594aa, type: 3}
+  itemObjectName: Visor
+  itemObjectTag: Hat
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 1b014bdf530b5014fb0680460cb31997, type: 2}
+  - {fileID: 2100000, guid: cd5aeeddd5d9e8d4a88f2b60b37bee46, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0, g: 0.86100054, b: 1, a: 1}
+  - {r: 0.9061289, g: 0, b: 1, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: c5e06dd500f293c4ca153e040d0594aa, type: 3}
+  - {fileID: 21300000, guid: 1dc830e6e8afb784baea4c8ba358125c, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: 1b014bdf530b5014fb0680460cb31997, type: 2}
+  - {fileID: 2100000, guid: cd5aeeddd5d9e8d4a88f2b60b37bee46, type: 2}
+  - {fileID: 2100000, guid: 6dea05cb5d608b34c98ebb603467940c, type: 2}
+  - {fileID: 2100000, guid: cd5aeeddd5d9e8d4a88f2b60b37bee46, type: 2}

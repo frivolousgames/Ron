@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Knee
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Knee
+  itemGenre: Clothing
+  itemType: Socks
+  itemSubType: Socks
+  itemCollection: 
+  itemDescription: Just plain old knee socks.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: b104e83ae565cdd4b87f222116fb7516, type: 3}
+  itemObjectName: socks lo
+  itemObjectTag: Socks
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: d45041d231c4ea84d9c74235811c77c6, type: 2}
+  - {fileID: 2100000, guid: cc789c52e45a8444d836c0e2ad547d13, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+  - {r: 0, g: 0.78307223, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0.04082775, a: 1}
+  - {r: 1, g: 0.9999781, b: 0, a: 1}
+  - {r: 0.093871, g: 1, b: 0, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: b104e83ae565cdd4b87f222116fb7516, type: 3}
+  - {fileID: 21300000, guid: 391676109cfdcdf47839cc1937e94452, type: 3}
+  - {fileID: 21300000, guid: f0299c467c7dc9247948a77e96cbe676, type: 3}
+  - {fileID: 21300000, guid: fcf6bf0a187d0fe47b1d7a02110f4e23, type: 3}
+  - {fileID: 21300000, guid: b5d3298200127d745a295fda0385fe28, type: 3}
+  - {fileID: 21300000, guid: 0a65db5540f195847a8cf0b8367122a3, type: 3}
+  - {fileID: 21300000, guid: 99f46a3329d446045b830645ab0afa97, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: d45041d231c4ea84d9c74235811c77c6, type: 2}
+  - {fileID: 2100000, guid: cc789c52e45a8444d836c0e2ad547d13, type: 2}
+  - {fileID: 2100000, guid: 4232b90cd9f2df14cbe3ac8d066a40ff, type: 2}
+  - {fileID: 2100000, guid: d7e5d8e1ca6a66c45b1a2d423ff167e8, type: 2}
+  - {fileID: 2100000, guid: 1db4148d85de8164cb40ef4a8a25437a, type: 2}
+  - {fileID: 2100000, guid: 1db4148d85de8164cb40ef4a8a25437a, type: 2}
+  - {fileID: 2100000, guid: e8eca3811014be047bf0d046d3a8ac0c, type: 2}
+  - {fileID: 2100000, guid: e8eca3811014be047bf0d046d3a8ac0c, type: 2}
+  - {fileID: 2100000, guid: c5b7f597db24b014086f8709c34a6071, type: 2}
+  - {fileID: 2100000, guid: c5b7f597db24b014086f8709c34a6071, type: 2}
+  - {fileID: 2100000, guid: 56564102572e3fa468935eea01383606, type: 2}
+  - {fileID: 2100000, guid: 56564102572e3fa468935eea01383606, type: 2}
+  - {fileID: 2100000, guid: 796fceb5dd3cd044c9ff6ba1af7f734c, type: 2}
+  - {fileID: 2100000, guid: 796fceb5dd3cd044c9ff6ba1af7f734c, type: 2}

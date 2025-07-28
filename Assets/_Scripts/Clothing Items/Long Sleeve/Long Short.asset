@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Long Short
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Short Sleeve Over Longjohns
+  itemGenre: Clothing
+  itemType: Shirts
+  itemSubType: Long Sleeve Shirt
+  itemCollection: 
+  itemDescription: Its the 90s bro this is how we do it.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 4d1603f9cf9d9cb43bb6d7fe672c1086, type: 3}
+  itemObjectName: Long Sleeve Shirt
+  itemObjectTag: Shirt
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: f66133ec13a5b0349a9c978862618a1d, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+  - {r: 0.2971698, g: 0.664348, b: 1, a: 1}
+  - {r: 0.43718347, g: 1, b: 0.023584902, a: 1}
+  - {r: 1, g: 0.7452882, b: 0.23113209, a: 1}
+  - {r: 1, g: 0.5707547, b: 0.59243363, a: 1}
+  - {r: 1, g: 0.19339621, b: 0.19339621, a: 1}
+  - {r: 0.18160377, g: 0.7264151, b: 0.2997556, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: 4d1603f9cf9d9cb43bb6d7fe672c1086, type: 3}
+  - {fileID: 21300000, guid: fd82af40aa55f124293c20519e6877aa, type: 3}
+  - {fileID: 21300000, guid: 88807f582c9030f449ad400f707a36fd, type: 3}
+  - {fileID: 21300000, guid: a4f7120634f069e419381859767b79a7, type: 3}
+  - {fileID: 21300000, guid: 7a9b8cbc9554ef5418867c75519c4900, type: 3}
+  - {fileID: 21300000, guid: 8744f24a8c347ff43b71c9416b30a34a, type: 3}
+  - {fileID: 21300000, guid: 1b43a9d74ff9fab47b66e2aa997681ee, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: f66133ec13a5b0349a9c978862618a1d, type: 2}
+  - {fileID: 2100000, guid: 044124c4b355c2b42bd7281e0fba3ad1, type: 2}
+  - {fileID: 2100000, guid: 09f2abdb03a7798449cd5a17285b1183, type: 2}
+  - {fileID: 2100000, guid: 726ed5fa4cee6d64581a225dda996e44, type: 2}
+  - {fileID: 2100000, guid: c794ce00254c21a458880a0bc1d62234, type: 2}
+  - {fileID: 2100000, guid: 14e45d6056060ff4e8ad72f7e95fb740, type: 2}
+  - {fileID: 2100000, guid: 08a91462d71fc794e92380e27d024676, type: 2}
+  hasAccessories: 0
+  accessoryObjects: []
+  isTuckable: 1

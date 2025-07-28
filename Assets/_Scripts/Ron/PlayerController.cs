@@ -455,10 +455,10 @@ public class PlayerController : MonoBehaviour
                 lookRot = Quaternion.LookRotation(rotMovement, Vector3.up);
                 rotDifference = transform.eulerAngles.y - lookRot.eulerAngles.y;
                 //rb.MovePosition(transform.position + movement * moveSpeed * Time.deltaTime);
-                //rb.velocity = transform.right + movement * moveSpeed * Time.deltaTime * speedMulti;
+                //rb.velocity = transform.right + movement * moveSpeed * Time.deltaTime * moveSpeedMulti;
                 Vector3 move = transform.right + movement * moveSpeed * Time.deltaTime * speedMulti;
                 rb.velocity = new Vector3(move.x, rb.velocity.y, move.z);
-                //rb.AddForce(transform.right + movement * moveSpeed * speedMulti, ForceMode.Force);
+                //rb.AddForce(transform.right + movement * moveSpeed * moveSpeedMulti, ForceMode.Force);
                 ResetIdle();
                 if (!isGrounded)
                 {

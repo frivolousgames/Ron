@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Flip Flops
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Flip Flops
+  itemGenre: Clothing
+  itemType: Shoes
+  itemSubType: Sandals
+  itemCollection: 
+  itemDescription: Wear these when you want to let people know you're coming so they
+    can hide.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 0177247c406eefc4db24916913291db4, type: 3}
+  itemObjectName: Flip Flops
+  itemObjectTag: Shoes
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 0873e24ec73fc9c4889800149caa86ba, type: 2}
+  - {fileID: 2100000, guid: bddd85a626a7d1c418e9408b163dd3b8, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.7231324, b: 1, a: 1}
+  - {r: 0.07381892, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: 0177247c406eefc4db24916913291db4, type: 3}
+  - {fileID: 21300000, guid: 5c5f8cd71948c9c4ab283d31541a0bfb, type: 3}
+  - {fileID: 21300000, guid: 3d92d364b253b9d44b7cfdf091ae92ec, type: 3}
+  - {fileID: 21300000, guid: f1098694be03720419b2a80b01ab3917, type: 3}
+  - {fileID: 21300000, guid: 5d7ae59209473d247b49fbc413de8419, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: 0873e24ec73fc9c4889800149caa86ba, type: 2}
+  - {fileID: 2100000, guid: bddd85a626a7d1c418e9408b163dd3b8, type: 2}
+  - {fileID: 2100000, guid: 8ad88760d55b0234e9dc8832c5087833, type: 2}
+  - {fileID: 2100000, guid: b0dfc63535cb92945b449565c23e22eb, type: 2}
+  - {fileID: 2100000, guid: aba88fec9b10d8f4ba31feaa7fdd297c, type: 2}
+  - {fileID: 2100000, guid: 777b1e5817b640e49826f4c766696f98, type: 2}
+  - {fileID: 2100000, guid: 20e6a6f92abcc9b469c21aec8ba808ef, type: 2}
+  - {fileID: 2100000, guid: 9c63638c585358b428cc5b1e4dad54c8, type: 2}
+  - {fileID: 2100000, guid: dc26286af62c8d248847da8212c8c156, type: 2}
+  - {fileID: 2100000, guid: d764a6cc8601ef747816270fadb3cb7f, type: 2}
+  hasAccessories: 0
+  accessoryObjects: []
+  isTuckable: 0

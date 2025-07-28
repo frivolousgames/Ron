@@ -13,7 +13,7 @@ public class FollowParallax : MonoBehaviour
     private void Awake()
     {
         boundsX = GetComponent<Renderer>().bounds.size.x;
-        Debug.Log("BoundsX: " + boundsX);
+        //Debug.Log("BoundsX: " + boundsX);
     }
 
     private void Start()

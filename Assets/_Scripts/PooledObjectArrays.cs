@@ -129,6 +129,12 @@ public class PooledObjectArrays : MonoBehaviour
     public static GameObject[] acidSmokeArrays;
     public static GameObject[] gooParticleArrays;
 
+    ///Under Water///
+    [SerializeField]
+    GameObject[] spermBullets;
+
+    public static GameObject[] spermBulletArrays;
+
     private void Awake()
     {
         ///Player Weapon///
@@ -179,5 +185,8 @@ public class PooledObjectArrays : MonoBehaviour
         gooSpatterArrays = gooSpatters;
         acidSmokeArrays = acidSmoke;
         gooParticleArrays = gooParticles;
+
+        ///Under Water
+        spermBulletArrays = spermBullets;
     }
 }

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Budidas
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Budidas
+  itemGenre: Clothing
+  itemType: Pants
+  itemSubType: Pants
+  itemCollection: Budidas
+  itemDescription: Good for busting a move or sitting on the couch eating pizza.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: be77ce7a273831a43a0bac74a1a828fb, type: 3}
+  itemObjectName: Jeans lo
+  itemObjectTag: Pants
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 34d22f56b5494fc4bbb06d92b6d3b171, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0.17171717, a: 1}
+  - {r: 0, g: 0.30524302, b: 1, a: 1}
+  - {r: 0, g: 0.8716216, b: 1, a: 1}
+  - {r: 0.024793386, g: 1, b: 0, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: be77ce7a273831a43a0bac74a1a828fb, type: 3}
+  - {fileID: 21300000, guid: e8ef234d797d8bb4a8e8c7b89359f65e, type: 3}
+  - {fileID: 21300000, guid: 8b9d880ff58710343b1f51b78a5b5c2b, type: 3}
+  - {fileID: 21300000, guid: 73d7018b55770de4bbd5033977e3c47f, type: 3}
+  - {fileID: 21300000, guid: cbf5bc3c2ef88154f8e86928a338c3ee, type: 3}
+  - {fileID: 21300000, guid: 87e8d1d232f0f864c92cfa2756788b34, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: 34d22f56b5494fc4bbb06d92b6d3b171, type: 2}
+  - {fileID: 2100000, guid: 6c724bfcf27bab0458a977093c48d826, type: 2}
+  - {fileID: 2100000, guid: aee0c72fcd240f842a74c59d0c58f1c6, type: 2}
+  - {fileID: 2100000, guid: e00b5a68503f5a34b94e4f85d1ea6bdc, type: 2}
+  - {fileID: 2100000, guid: 97c0a66f82e9f994abc6414e1c08ef31, type: 2}
+  - {fileID: 2100000, guid: cba2a257fe846d646ae84878fd2e3726, type: 2}

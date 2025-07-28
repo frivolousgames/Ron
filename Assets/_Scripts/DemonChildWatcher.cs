@@ -80,7 +80,7 @@ public class DemonChildWatcher : MonoBehaviour
 
         StartTurn();
         ResetPosition();
-        //Debug.Log(playerDistance.x + "--" + turnDistance);
+        //Debug.Log(playerDistance.x + "--" + currentTurnDistance);
     }
 
     void StartTurn()

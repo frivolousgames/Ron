@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Baseball_Pyrites
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Pittsburgh Pyrites
+  itemGenre: Clothing
+  itemType: Hats
+  itemSubType: Baseball Hat
+  itemCollection: 
+  itemDescription: 'Wear it until you can find a garbage can to throw it in.
+
+'
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: e0e6cf1aaf1f21c40a5d4a39f6ba22a8, type: 3}
+  itemObjectName: Baseball Hat
+  itemObjectTag: Hat
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 25f2b0afce785274da4ad5c6b073ecc6, type: 2}
+  - {fileID: 2100000, guid: aa9e5aca9fdabcd47b8b09f7fff12df8, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.9780377, b: 0, a: 1}
+  - {r: 0.97404873, g: 1, b: 0, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: e0e6cf1aaf1f21c40a5d4a39f6ba22a8, type: 3}
+  - {fileID: 21300000, guid: 4b7cbd08622e2ce4896cce76ada5c072, type: 3}
+  - {fileID: 21300000, guid: 97321b1410f99404aa9f9988350f1d85, type: 3}
+  - {fileID: 21300000, guid: 5fa4de62e20366048a2f271523c6a739, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: 25f2b0afce785274da4ad5c6b073ecc6, type: 2}
+  - {fileID: 2100000, guid: aa9e5aca9fdabcd47b8b09f7fff12df8, type: 2}
+  - {fileID: 2100000, guid: d5547ebd3b8d14d428649b73cf0e1747, type: 2}
+  - {fileID: 2100000, guid: aa9e5aca9fdabcd47b8b09f7fff12df8, type: 2}
+  - {fileID: 2100000, guid: 2f4769b235574fd4691b97e6c3399274, type: 2}
+  - {fileID: 2100000, guid: aa9e5aca9fdabcd47b8b09f7fff12df8, type: 2}
+  - {fileID: 2100000, guid: 129f108b6c1899048b857b4b64ee67d0, type: 2}
+  - {fileID: 2100000, guid: aa9e5aca9fdabcd47b8b09f7fff12df8, type: 2}

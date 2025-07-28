@@ -55,7 +55,6 @@ public class BulletMover : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        Debug.Log("Invisible");
         gameObject.SetActive(false);
     }
 

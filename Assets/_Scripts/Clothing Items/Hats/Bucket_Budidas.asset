@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Bucket_Budidas
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Budidas
+  itemGenre: Clothing
+  itemType: Hats
+  itemSubType: Bucket Hat
+  itemCollection: Budidas
+  itemDescription: Budidas brand bucket hat for the fancy b-boy
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: a2eef15c61293344da4692dfcba6084e, type: 3}
+  itemObjectName: Bucket Hat
+  itemObjectTag: Hat
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 2002c8ffac2b8d546a3f440ac197aebf, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.84148407, b: 1, a: 1}
+  - {r: 0, g: 0.24652767, b: 1, a: 1}
+  - {r: 0.09919691, g: 1, b: 0, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: a2eef15c61293344da4692dfcba6084e, type: 3}
+  - {fileID: 21300000, guid: 1ce677613b033d64b834b7e81e3a0936, type: 3}
+  - {fileID: 21300000, guid: d23617d4d9c63ec4398ce29f1736b61b, type: 3}
+  - {fileID: 21300000, guid: 005bf51afe6799e4681f7ff65a15af9c, type: 3}
+  - {fileID: 21300000, guid: d2c028c0a0633db46bcdb7415c168920, type: 3}
+  - {fileID: 21300000, guid: 54e53d7174394bd49935ac202f6e5838, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: 2002c8ffac2b8d546a3f440ac197aebf, type: 2}
+  - {fileID: 2100000, guid: c829477afc57af74d9aaeb7fff12206d, type: 2}
+  - {fileID: 2100000, guid: 5b1ef587cccee27408fdb40d4e09998a, type: 2}
+  - {fileID: 2100000, guid: 6ae454ca740918d4c89302d14ae4c1da, type: 2}
+  - {fileID: 2100000, guid: 5839c8dd9aee12b4e97949957e83e7e8, type: 2}
+  - {fileID: 2100000, guid: 24bf28ae072360844b67120f0b150d32, type: 2}

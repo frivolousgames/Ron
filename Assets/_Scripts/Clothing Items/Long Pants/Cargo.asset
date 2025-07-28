@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Cargo
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Cargo
+  itemGenre: Clothing
+  itemType: Pants
+  itemSubType: Pants
+  itemCollection: Cargo
+  itemDescription: I use the extra pockets to keep sandwiches in.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 4fe6634fdd741c54ea7e44da9d9ac558, type: 3}
+  itemObjectName: Jeans lo
+  itemObjectTag: Pants
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: 069d855cc4c822342bbca2b1028a5906, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0.6132076, g: 0.48295522, b: 0.23429158, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+  - {r: 0.16745283, g: 0.33211482, b: 0.6698113, a: 1}
+  - {r: 0.27625492, g: 0.6037736, b: 0.290093, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: 4fe6634fdd741c54ea7e44da9d9ac558, type: 3}
+  - {fileID: 21300000, guid: ef79b22704a5d4b448d476dc3b6972a3, type: 3}
+  - {fileID: 21300000, guid: 9c70585d2edbc924082f55ad08853e62, type: 3}
+  - {fileID: 21300000, guid: d5b3829aa054d6c4797ccb78ada40d4e, type: 3}
+  - {fileID: 21300000, guid: f358e1a63014def439c7f7cf135dfdce, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: 069d855cc4c822342bbca2b1028a5906, type: 2}
+  - {fileID: 2100000, guid: e933ff99a00947f4dbb87cb36b6e1bb9, type: 2}
+  - {fileID: 2100000, guid: f8de57638b1d2984ea1756c0301e6ba4, type: 2}
+  - {fileID: 2100000, guid: d35ab8917d561774897ac022ce892f72, type: 2}
+  - {fileID: 2100000, guid: 53d0e7077c4f75943a2f575fa3cf2f81, type: 2}

@@ -23,7 +23,7 @@ public class AirplaneShooter : MonoBehaviour
     ObjectPooler pooler;
 
     float shootWait;
-
+    Coroutine shootRoutine;
 
     private void Awake()
     {
@@ -33,12 +33,12 @@ public class AirplaneShooter : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(Shoot());
+        shootRoutine = StartCoroutine(Shoot());
     }
 
     private void OnDisable()
     {
-        StopAllCoroutines();
+        StopCoroutine(shootRoutine);
     }
 
     private void Update()

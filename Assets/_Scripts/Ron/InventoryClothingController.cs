@@ -74,16 +74,16 @@ public class InventoryClothingController : MonoBehaviour
 
     private void Awake()
     {
-        sharedMesh = mr.sharedMesh;
-        tankTopShape = sharedMesh.GetBlendShapeIndex("Tank shrink");
-        shortSleevesShape = sharedMesh.GetBlendShapeIndex("Short Sleeve Shrink");
-        longSleevesShape = sharedMesh.GetBlendShapeIndex("Long Sleeve Shrink");
-        shortSleevesShape = sharedMesh.GetBlendShapeIndex("Short Sleeve Shrink");
-        shortPantsShape = sharedMesh.GetBlendShapeIndex("Shorts Shrink");
-        longPantsShape = sharedMesh.GetBlendShapeIndex("Pants Shrink");
-        hatShape = sharedMesh.GetBlendShapeIndex("hat");
-        visorShape = sharedMesh.GetBlendShapeIndex("Visor");
-        bucketHatShape = sharedMesh.GetBlendShapeIndex("Bucket Hat");
+        //sharedMesh = mr.sharedMesh;
+        //tankTopShape = sharedMesh.GetBlendShapeIndex("Tank Shrink");
+        //shortSleevesShape = sharedMesh.GetBlendShapeIndex("Short Sleeve Shrink");
+        //longSleevesShape = sharedMesh.GetBlendShapeIndex("Long Sleeve Shrink");
+        //shortSleevesShape = sharedMesh.GetBlendShapeIndex("Short Sleeve Shrink");
+        //shortPantsShape = sharedMesh.GetBlendShapeIndex("Shorts Shrink");
+        //longPantsShape = sharedMesh.GetBlendShapeIndex("Pants Shrink");
+        //hatShape = sharedMesh.GetBlendShapeIndex("Hat Shrink");
+        //visorShape = sharedMesh.GetBlendShapeIndex("Visor Shrink");
+        //bucketHatShape = sharedMesh.GetBlendShapeIndex("Bucket Hat Shrink");
     }
 
     void SetClothingVariables(GameObject selectedClothing)

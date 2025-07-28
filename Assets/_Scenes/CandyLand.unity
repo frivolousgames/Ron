@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 974.7841, g: 1050.0493, b: 1538.0286, a: 1}
+  m_IndirectSpecularColor: {r: 1028.086, g: 1102.2961, b: 1575.1252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -82661,6 +82661,21 @@ PrefabInstance:
       propertyPath: healthAdd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1121816367}
+    - target: {fileID: 1130759401883060161, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278362093691629163, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229665980413656186, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2604832555830393637, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
         type: 3}
       propertyPath: m_Name
@@ -82719,6 +82734,36 @@ PrefabInstance:
     - target: {fileID: 3417644720519963039, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597709084162062225, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774944944958743833, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554667840987540911, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166024185187382649, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304139826867566452, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452816098707507021, guid: 232e10c7306abdb4e989dc42b8b8b3ee,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3ddff0ff750e242b27556191890fd8, type: 3}
+  m_Name: Jean
+  m_EditorClassIdentifier: 
+  isActivated: 1
+  itemName: Jean
+  itemGenre: Clothing
+  itemType: Pants
+  itemSubType: Shorts
+  itemCollection: Jeans
+  itemDescription: Love my jorts.
+  itemAlcoholBonus: 0
+  itemDrugsBonus: 0
+  itemImage: {fileID: 21300000, guid: 7f0c0749abb280e448691bb5c6318dbd, type: 3}
+  itemObjectName: Jorts Lo
+  itemObjectTag: Pants
+  itemArmorBonus: 1
+  itemMats:
+  - {fileID: 2100000, guid: e7770badcec87a94489b855ea3d8f436, type: 2}
+  hasVariations: 1
+  variationColors:
+  - {r: 0.5235849, g: 0.79582196, b: 1, a: 1}
+  - {r: 0.5254902, g: 0.7960785, b: 1, a: 1}
+  - {r: 0.18823531, g: 0.18823531, b: 0.18823531, a: 1}
+  - {r: 0.18823531, g: 0.18823531, b: 0.18823531, a: 1}
+  - {r: 0.2240566, g: 0.34231806, b: 0.5, a: 1}
+  - {r: 0.2240566, g: 0.34231806, b: 0.5, a: 1}
+  variationPics:
+  - {fileID: 21300000, guid: 7f0c0749abb280e448691bb5c6318dbd, type: 3}
+  - {fileID: 21300000, guid: 4002eb48066f9d747b3f3d14a9ddece1, type: 3}
+  - {fileID: 21300000, guid: 6da998c081f0e1c428da6c72b8d8a739, type: 3}
+  - {fileID: 21300000, guid: 70c64b7f322f3df43bef87e103c0a9ca, type: 3}
+  - {fileID: 21300000, guid: ed0525e2bf6106d4e97c7068f4f06eef, type: 3}
+  - {fileID: 21300000, guid: f8b5d6a6406c0224eaddd00ee0d86bf7, type: 3}
+  variationMats:
+  - {fileID: 2100000, guid: e7770badcec87a94489b855ea3d8f436, type: 2}
+  - {fileID: 2100000, guid: e7770badcec87a94489b855ea3d8f436, type: 2}
+  - {fileID: 2100000, guid: 4a22c231224adc644963ef55682d8b9c, type: 2}
+  - {fileID: 2100000, guid: 4a22c231224adc644963ef55682d8b9c, type: 2}
+  - {fileID: 2100000, guid: 27a2f1a59bd6f1d45a4c986dad98bac4, type: 2}
+  - {fileID: 2100000, guid: 27a2f1a59bd6f1d45a4c986dad98bac4, type: 2}
