@@ -12,6 +12,7 @@ public class ColliderHit : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerWeapon"))
         {
             hit.Invoke();
+            Debug.Log("Hit");
         }
     }
 }

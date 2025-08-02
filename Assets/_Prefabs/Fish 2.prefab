@@ -4823,13 +4823,16 @@ GameObject:
   - component: {fileID: 6016619728683675643}
   - component: {fileID: 6016619728683675641}
   - component: {fileID: 6016619728683675642}
+  - component: {fileID: 1862213009}
+  - component: {fileID: 7189636123231472063}
+  - component: {fileID: 3801404159933233074}
   m_Layer: 0
   m_Name: Fish 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6016619728683675643
 Transform:
   m_ObjectHideFlags: 0
@@ -4886,6 +4889,76 @@ MonoBehaviour:
   onVis: {fileID: 546031540549565829}
   inactiveWait: 4
   ps: {fileID: 1792768955}
+--- !u!114 &1862213009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016619728683675644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f5d3b1b8945b845be1361983af90c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  health: 0
+  die:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6016619728683675642}
+        m_TargetAssemblyTypeName: SwimmingFishController, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isDead: 0
+--- !u!65 &7189636123231472063
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016619728683675644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6860808, y: 0.28805637, z: 5.77916}
+  m_Center: {x: 0.024327219, y: 0.011471033, z: 0}
+--- !u!114 &3801404159933233074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016619728683675644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b812d52e6dbd754a9bd1ff7acdda2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1862213009}
+        m_TargetAssemblyTypeName: EnemyHealth, Assembly-CSharp
+        m_MethodName: VehicleIsHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &3105577762742886568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4987,6 +5060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fish 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe2c8f0027c34bb498efa7627df71dcd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2c8f0027c34bb498efa7627df71dcd, type: 3}

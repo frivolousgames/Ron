@@ -13,15 +13,20 @@ public class SwimmingFishController : SwimmingBackgroundAnimals
 
     [SerializeField]
     ParticleSystem ps;
+
+    ObjectPooler pooler;
+    GameObject[] fishChunks;
     //ParticleSystem.MainModule mainModule;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        pooler = new ObjectPooler();
     }
 
     private void Start()
     {
+        fishChunks = PooledObjectArrays.fishChunksArrays;
         //mainModule = ps.main;
     }
     private void OnEnable()
@@ -71,5 +76,11 @@ public class SwimmingFishController : SwimmingBackgroundAnimals
         }
         gameObject.SetActive(false);
         yield break;
+    }
+
+    public void Die()
+    {
+        pooler.PoolObjects(fishChunks, transform.position, transform.rotation, Vector3.zero);
+        gameObject.SetActive(false);
     }
 }

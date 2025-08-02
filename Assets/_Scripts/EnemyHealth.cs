@@ -45,6 +45,7 @@ public class EnemyHealth : MonoBehaviour
     public void VehicleIsHit()
     {
         hitPower = PlayerInfo.vehicleWeaponPower[PlayerController.selectedVehicleWeapon];
+        Debug.Log("PC: " + PlayerController.selectedVehicleWeapon);
         health -= hitPower;
     }
 }

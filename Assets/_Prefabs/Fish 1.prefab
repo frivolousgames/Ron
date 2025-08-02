@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 8675737461075185892}
   - component: {fileID: 8675737461075185894}
   - component: {fileID: 8675737461075185893}
+  - component: {fileID: 1299357541}
   m_Layer: 0
   m_Name: Fish 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8675737461075185892
 Transform:
   m_ObjectHideFlags: 0
@@ -49,7 +50,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 24
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &8675737461075185893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +75,36 @@ MonoBehaviour:
   onVis: {fileID: 6655943119357739977}
   inactiveWait: 4
   ps: {fileID: 6655943120029145252}
+--- !u!114 &1299357541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675737461075185891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f5d3b1b8945b845be1361983af90c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  health: 0
+  die:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8675737461075185893}
+        m_TargetAssemblyTypeName: SwimmingFishController, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isDead: 0
 --- !u!1001 &6655943120339865033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,6 +192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2952577466967994873, guid: 4df835d744f3f6f4f81ba38eeab77b48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df835d744f3f6f4f81ba38eeab77b48, type: 3}
 --- !u!114 &6655943119357739977 stripped
@@ -187,6 +223,52 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 6655943120339865033}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8405687851330780208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2952577466967994873, guid: 4df835d744f3f6f4f81ba38eeab77b48,
+    type: 3}
+  m_PrefabInstance: {fileID: 6655943120339865033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1389894397523697158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8405687851330780208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 27.100002, y: 1.9, z: 4.4535375}
+  m_Center: {x: 0.010303258, y: 0.0147194415, z: -0.02104111}
+--- !u!114 &588207481250784036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8405687851330780208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b812d52e6dbd754a9bd1ff7acdda2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1299357541}
+        m_TargetAssemblyTypeName: EnemyHealth, Assembly-CSharp
+        m_MethodName: IsHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &9217971495011313290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2572251638081481539, guid: 4df835d744f3f6f4f81ba38eeab77b48,

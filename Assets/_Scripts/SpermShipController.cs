@@ -55,6 +55,10 @@ public class SpermShipController : MonoBehaviour
     [SerializeField]
     ParticleSystem propPS;
     ParticleSystem.MainModule propPSMain;
+    ParticleSystem.MinMaxCurve propPSStartCurve;
+    [SerializeField]
+    ParticleSystem.MinMaxCurve propPSTurnCurve;
+
 
     //Prop Post//
     [SerializeField]
@@ -106,6 +110,7 @@ public class SpermShipController : MonoBehaviour
         propPostRotMaxZ = propPost.localEulerAngles.z + 13f;
 
         propPSMain = propPS.main;
+        propPSStartCurve = propPSMain.startSpeed;
         bodyPSEmission = bodyPS.emission;
         bodyPSEmission.rateOverTime = bodyPSStartAmount;
 
@@ -143,7 +148,7 @@ public class SpermShipController : MonoBehaviour
         Setdirection();
         currentTurnDistance = Mathf.Abs(frontTrans.position.x - backTrans.position.x);
         SetIsTurning();
-        Debug.Log("IsTurning: " + isTurning);
+        //Debug.Log("IsTurning: " + isTurning);
     }
 
     private void FixedUpdate()
@@ -396,6 +401,7 @@ public class SpermShipController : MonoBehaviour
             f += postSpeedMulti;
             float speed = Mathf.Lerp(34f, 0f, f);
             currentPostAngleX = speed;
+            
             yield return null;
         }
         yield return null;
@@ -405,11 +411,12 @@ public class SpermShipController : MonoBehaviour
     {
         isTurningZ = true;
         float f = 0f;
-        while (currentPostAngleZ < 13)
+        while (currentPostAngleZ < maxPostAngleZ)
         {
             f += postSpeedMulti;
-            float speed = Mathf.Lerp(0f, 13, f);
+            float speed = Mathf.Lerp(0f, maxPostAngleZ, f);
             currentPostAngleZ = speed;
+            propPSMain.startSpeed = propPSTurnCurve;
             yield return null;
         }
         yield break;
@@ -422,8 +429,9 @@ public class SpermShipController : MonoBehaviour
         while (currentPostAngleZ > 0f)
         {
             f += postSpeedMulti;
-            float speed = Mathf.Lerp(13f, 0f, f);
+            float speed = Mathf.Lerp(maxPostAngleZ, 0f, f);
             currentPostAngleZ = speed;
+            propPSMain.startSpeed = propPSStartCurve;
             yield return null;
         }
         yield return null;

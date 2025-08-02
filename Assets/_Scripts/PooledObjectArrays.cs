@@ -132,8 +132,11 @@ public class PooledObjectArrays : MonoBehaviour
     ///Under Water///
     [SerializeField]
     GameObject[] spermBullets;
+    [SerializeField]
+    GameObject[] fishChunks;
 
     public static GameObject[] spermBulletArrays;
+    public static GameObject[] fishChunksArrays;
 
     private void Awake()
     {
@@ -188,5 +191,6 @@ public class PooledObjectArrays : MonoBehaviour
 
         ///Under Water
         spermBulletArrays = spermBullets;
+        fishChunksArrays = fishChunks;
     }
 }

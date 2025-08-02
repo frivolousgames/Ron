@@ -119,7 +119,7 @@ public class FishSchoolSpawner : MonoBehaviour
                     fishMats[1].SetColor("_Color", randomColorC);
 
                     
-                    Debug.Log("offsetY: " + offsetY);
+                    //Debug.Log("offsetY: " + offsetY);
                     pooler.PoolObjects(fishPools[index], new Vector3(fishSpawntrans.position.x + (offsetX * SpermShipController.directionX), fishSpawntrans.position.y + offsetY + screenOffsetY, fishSpawntrans.position.z + offsetZ), fishSpawntrans.rotation, Vector3.zero);
                     thresh++;
                     if(thresh == rowAmount)
