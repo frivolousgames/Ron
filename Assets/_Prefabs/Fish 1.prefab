@@ -112,6 +112,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8675737461075185892}
     m_Modifications:
+    - target: {fileID: 396023148, guid: 4df835d744f3f6f4f81ba38eeab77b48, type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 396023148, guid: 4df835d744f3f6f4f81ba38eeab77b48, type: 3}
+      propertyPath: m_VertexStreams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 396023148, guid: 4df835d744f3f6f4f81ba38eeab77b48, type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 396023148, guid: 4df835d744f3f6f4f81ba38eeab77b48, type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 396023149, guid: 4df835d744f3f6f4f81ba38eeab77b48, type: 3}
       propertyPath: ShapeModule.m_MeshRenderer
       value: 

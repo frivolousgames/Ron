@@ -81,6 +81,14 @@ public class EnemyController : MonoBehaviour
     protected float ragdollSpeed;
     public static Vector3 ragdollDirection;
 
+    //OnInvisible
+    [SerializeField]
+    protected float invisibleTimeThresh;
+    protected float invisbleTime;
+    protected bool isInvisible;
+    protected bool isReset;
+    protected Coroutine invisibleRoutine;
+
     ///Gooch Poop
     protected bool isPoopedOn;
     protected bool poopWait;
@@ -267,6 +275,15 @@ public class EnemyController : MonoBehaviour
         isFollowing = false;
         isMoving = false;
         isAttacking = true;
+    }
+
+    //Invisible
+
+    protected virtual IEnumerator InvisibleCounter()
+    {
+        yield return new WaitForSeconds(invisibleTimeThresh);
+        isReset = true;
+        yield break;
     }
 
     ///Gooch Poop

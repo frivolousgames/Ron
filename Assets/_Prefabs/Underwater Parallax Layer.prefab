@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 1571186690520902673, guid: 40667a387e18f4b4eb5a9de3569b01c4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1571186690520902673, guid: 40667a387e18f4b4eb5a9de3569b01c4,
         type: 3}
@@ -169,6 +169,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Underwater Bubbles Big
       objectReference: {fileID: 0}
+    - target: {fileID: 1571186690520902675, guid: 40667a387e18f4b4eb5a9de3569b01c4,
+        type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571186690520902675, guid: 40667a387e18f4b4eb5a9de3569b01c4,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571186690520902675, guid: 40667a387e18f4b4eb5a9de3569b01c4,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571186690520902675, guid: 40667a387e18f4b4eb5a9de3569b01c4,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40667a387e18f4b4eb5a9de3569b01c4, type: 3}
 --- !u!4 &8608305785301006565 stripped
@@ -207,7 +227,7 @@ PrefabInstance:
     - target: {fileID: 6624144728041913571, guid: 69bf73c6521e36e488c1e82322401a92,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6624144728041913571, guid: 69bf73c6521e36e488c1e82322401a92,
         type: 3}
@@ -349,6 +369,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Underwater Bubbles Main
       objectReference: {fileID: 0}
+    - target: {fileID: 1238561270657373457, guid: f5c53694f9615af4e98263a906f5674e,
+        type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238561270657373457, guid: f5c53694f9615af4e98263a906f5674e,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238561270657373457, guid: f5c53694f9615af4e98263a906f5674e,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238561270657373457, guid: f5c53694f9615af4e98263a906f5674e,
+        type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1238561270657373459, guid: f5c53694f9615af4e98263a906f5674e,
         type: 3}
       propertyPath: m_RootOrder
@@ -367,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 1238561270657373459, guid: f5c53694f9615af4e98263a906f5674e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1238561270657373459, guid: f5c53694f9615af4e98263a906f5674e,
         type: 3}

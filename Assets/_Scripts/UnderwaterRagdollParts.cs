@@ -80,7 +80,7 @@ public class UnderwaterRagdollParts : MonoBehaviour
         {
             a = Mathf.Lerp(a, 0, fadeSpeed * Time.deltaTime);
             meshRenderer.materials[index].color = new Color(meshRenderer.materials[index].color.r, meshRenderer.materials[index].color.g, meshRenderer.materials[index].color.b, a);
-            Debug.Log("Col: " + a);
+            //Debug.Log("Col: " + a);
             yield return null;
         }
         meshRenderer.materials[index].color = new Color(meshRenderer.materials[index].color.r, meshRenderer.materials[index].color.g, meshRenderer.materials[index].color.b, 0f);
