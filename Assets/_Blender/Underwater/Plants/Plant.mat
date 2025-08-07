@@ -27,6 +27,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 6f737c23a3a746d498d71d7fabe81f81,
     type: 3}
   m_ValidKeywords:
+  - _ALPHATEST_ON
   - _DISABLE_DECALS
   - _DISABLE_SSR_TRANSPARENT
   - _DOUBLESIDED_ON
@@ -161,9 +162,9 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
-    - _AlphaClipThreshold: 1
+    - _AlphaClipThreshold: 0.03
     - _AlphaCutoff: 0.5
-    - _AlphaCutoffEnable: 0
+    - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
     - _AlphaCutoffShadow: 0.5
@@ -283,9 +284,9 @@ Material:
     - _UseShadowThreshold: 0
     - _WindDensity: 10.54
     - _WindStrength: 0.3
-    - _ZTestDepthEqualForOpaque: 0
-    - _ZTestGBuffer: 4
-    - _ZTestTransparent: 0
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 3
+    - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
