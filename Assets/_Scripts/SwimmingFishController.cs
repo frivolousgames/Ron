@@ -16,6 +16,11 @@ public class SwimmingFishController : SwimmingBackgroundAnimals
 
     ObjectPooler pooler;
     GameObject[] fishChunks;
+
+    [SerializeField]
+    float speedMin;
+    [SerializeField]
+    float speedMax;
     //ParticleSystem.MainModule mainModule;
 
     private void Awake()
@@ -33,7 +38,7 @@ public class SwimmingFishController : SwimmingBackgroundAnimals
     {
         currentAnimSpeed = Random.Range(.9f, 1f);
         //currentSpeed = Random.Range(-100f, -200f);
-        currentSpeed = -150f;
+        //currentSpeed = -150f;
         anim.speed = currentAnimSpeed;
 
         height = Random.Range(minHeight, maxHeight);
@@ -54,7 +59,7 @@ public class SwimmingFishController : SwimmingBackgroundAnimals
 
     private void FixedUpdate()
     {
-        currentSpeed = Random.Range(-200f, -230f);
+        currentSpeed = Random.Range(speedMin, speedMax);
         rb.velocity = new Vector3(transform.right.x * currentSpeed * Time.deltaTime, Mathf.SmoothStep(-height, height, Mathf.PingPong(Time.time * heightSpeed, 1)), 0f);
     }
     void SetInactiveByTime()

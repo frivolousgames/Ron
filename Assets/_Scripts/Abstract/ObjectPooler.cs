@@ -17,4 +17,14 @@ public class ObjectPooler
             }
         }
     }
+
+    public void PoolObjects(GameObject obj, Vector3 pos, Quaternion rot, Vector3 spawnOffset) //Add this object and instatiate in awake for any pooled objects
+    {
+        if (!obj.activeInHierarchy)
+        {
+            obj.SetActive(true);
+            obj.transform.position = pos + spawnOffset;
+            obj.transform.rotation = rot;
+        }
+    }
 }
