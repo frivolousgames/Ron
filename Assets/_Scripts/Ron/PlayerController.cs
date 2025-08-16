@@ -79,10 +79,15 @@ public class PlayerController : MonoBehaviour
     List<bool> obtainedWeaponsList;
 
     public bool isShooting;
+    bool isContinueShooting;
+    bool shootDelay;
+    bool isShootEnd;
     public bool weaponRaised;
+    bool isRaising;
     public bool weaponSheathed;
     public bool weaponAimed;
     bool aimable;
+    bool automatic;
     bool spendShells;
     bool weaponEquipped;
 
@@ -312,7 +317,9 @@ public class PlayerController : MonoBehaviour
 
         ////WEAPONS///
         anim.SetBool("isShooting", isShooting);
+        //anim.SetBool("isContinueShooting", isContinueShooting);
         anim.SetBool("weaponRaised", weaponRaised);
+        anim.SetBool("isRaising", isRaising);
         anim.SetBool("weaponAimed", weaponAimed);
         //anim.SetBool("weaponSheathed", weaponSheathed);
         anim.SetBool("hasKnife", hasKnife);
@@ -421,6 +428,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.layer == 6)
+        {
+            isGrounded = true;
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.layer == 6)
@@ -1120,6 +1134,7 @@ public class PlayerController : MonoBehaviour
         hasMeleeTwoHanded = PlayerInfo.hasMeleeTwoHanded[equippedWeapon];
         hasDildo = PlayerInfo.hasDildo[equippedWeapon];
         aimable = PlayerInfo.aimable[equippedWeapon];
+        automatic = PlayerInfo.automatic[equippedWeapon];
         spendShells = PlayerInfo.spendShells[equippedWeapon];
     }
 
@@ -1137,35 +1152,90 @@ public class PlayerController : MonoBehaviour
     {
         if (weaponEquipped)
         {
-            if (Input.GetMouseButton(0))
+            if (!weaponRaised && !WeaponAlwaysRaised())
             {
-                ResetIdle();
-                if (!isShooting && !freezeMovement)
+                if (Input.GetMouseButtonDown(0))
                 {
-                    if (!weaponRaised && !WeaponAlwaysRaised())
+                    if (!isRaising)
                     {
-                        weaponRaised = true;
+                        isRaising = true;
                         StartCoroutine(RaiseWeaponWait());
-                    }
-                    //else if (weaponSheathed)
-                    //{
-                    //    weaponSheathed = false;
-                    //    StartCoroutine(UnSheathWeaponWait());
-                    //}
-                    else
-                    {
-                        isShooting = true;
-                        anim.SetTrigger("Shoot");
-                        StartCoroutine(ShootWait());
-                    }
+                    }  
                 }
             }
-        } 
+            //else if (weaponSheathed)//Add when weapon sheathing added
+            //                //{
+            //                //    weaponSheathed = false;
+            //                //    StartCoroutine(UnSheathWeaponWait());
+            //                //}
+            else
+            {
+                if(!isShooting && !isShootEnd)
+                {
+                    if (automatic)
+                    {
+                        if (Input.GetMouseButton(0))
+                        {
+                            isShooting = true;
+                            StartCoroutine(ShootWait());
+                            Debug.Log("Shoot");
+                        }
+                    }
+                    else
+                    {
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            isShooting = true;
+                            isShootEnd = true;
+                            StartCoroutine(ContinueShooting());
+                            Debug.Log("Shoot");
+                        }
+                    }
+                }
+                
+            }
+        }
+
     }
+    //void Shoot()
+    //{
+
+    //    if (weaponEquipped)
+    //    {
+    //        if (Input.GetMouseButtonDown(0))
+    //        {
+    //            ResetIdle();
+    //            if (!isShooting && !freezeMovement)
+    //            {
+    //                if (!weaponRaised && !WeaponAlwaysRaised())
+    //                {
+    //                    weaponRaised = true;
+    //                    StartCoroutine(RaiseWeaponWait());
+    //                }
+    //                //else if (weaponSheathed)
+    //                //{
+    //                //    weaponSheathed = false;
+    //                //    StartCoroutine(UnSheathWeaponWait());
+    //                //}
+    //                else
+    //                {
+    //                    Debug.Log("Shoot");
+    //                    isShooting = true;
+    //                    StartCoroutine(ContinueShooting());
+    //                    //anim.SetTrigger("Shoot");
+    //                    //StartCoroutine(ShootWait());
+    //                }
+    //            }
+    //        }
+    //    } 
+    //}
 
     IEnumerator RaiseWeaponWait()
     {
         yield return new WaitForSeconds(raiseWait);
+        weaponRaised = true;
+        isRaising = false;
+        //Debug.Log("Raising");
         yield break;
     }
     IEnumerator UnSheathWeaponWait()
@@ -1173,12 +1243,60 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(unsheathWait);
         yield break;
     }
+
+    IEnumerator ContinueShooting() // Decides whether or not youve hit the attack button again
+    {
+        shootDelay = true;
+        yield return new WaitForSeconds(.01f);
+        while(shootDelay)
+        {
+            if(!isContinueShooting && Input.GetMouseButtonDown(0))
+            {
+                isContinueShooting = true;
+                //Debug.Log("Clicked");
+                yield break;
+            }
+            //Debug.Log(i);
+            yield return null;
+        }
+        isContinueShooting = false;
+        isShooting = false;
+        //Debug.Log("Stop");
+        yield break;
+    }
+
+    public void SetIsContinueShooting() //Put on second to last frame of attack animation to decide if attack continues
+    {
+        if(isContinueShooting)
+        {
+            //Debug.Log("Continue");
+            StartCoroutine(ContinueShooting());
+            isContinueShooting = false;
+        }
+        else
+        {
+            shootDelay = false;
+            isShooting = false;
+        }
+    }
     IEnumerator ShootWait()
     {
         //shoot
         yield return new WaitForSeconds(shootWait);
         isShooting = false;
         yield break;
+    }
+
+    public void ResetIsShootEnd()// Put as event at end of attack animations
+    {
+        isShootEnd = false;
+    }
+
+    public void ResetShootDelay()// Put as event on second to last frame of last animation in series to stop attack
+    {
+        shootDelay = false;
+        isShooting = false;
+        isContinueShooting = false;
     }
 
     public void WeaponRaised()
@@ -1231,8 +1349,8 @@ public class PlayerController : MonoBehaviour
         //raiseWait = anim.GetCurrentAnimatorClipInfo(activeWeaponLayer)[0].clip.length;
         //string name = anim.GetCurrentAnimatorClipInfo(activeWeaponLayer)[0].clip.name;
 
-        //Debug.Log("ShootWait: " + raiseWait);
-        //Debug.Log("RaiseWait: " + name);
+        ////Debug.Log("ShootWait: " + raiseWait);
+        ////Debug.Log("RaiseWait: " + name);
         //shootWait = raiseWait;
     }
 

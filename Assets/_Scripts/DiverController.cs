@@ -5,12 +5,15 @@ using UnityEngine.AI;
 
 public class DiverController : UnfoldingEnemies
 {
+    [SerializeField]
+    float moveSpeed;
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         navAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log("Player: " + player.name);
         startSpawnPos = transform.position;
         startSpawnRot = transform.rotation;
     }
@@ -40,6 +43,7 @@ public class DiverController : UnfoldingEnemies
 
     protected override IEnumerator PlayerFollowRoutine()
     {
+        Debug.Log("Started");
         isTurning = true;
         float h = 0;
         while (h < 10)
@@ -49,11 +53,10 @@ public class DiverController : UnfoldingEnemies
 
             yield return null;
         }
+        isTurning = false;
         while (isUnfolded)
         {
             isFollowing = true;
-            navAgent.enabled = true;
-            rb.isKinematic = true;
             while (isFollowing)
             {
                 FollowPlayer();
@@ -114,5 +117,18 @@ public class DiverController : UnfoldingEnemies
                 StopCoroutine(invisibleRoutine);
             }
         }
+    }
+
+    protected override void FollowPlayer()
+    {
+        isMoving = true;
+        rb.MovePosition(Vector3.Lerp(transform.position, player.transform.position, moveSpeed * Time.deltaTime));
+    }
+
+    protected override void EndFollow()
+    {
+        isFollowing = false;
+        isMoving = false;
+        isAttacking = true;
     }
 }

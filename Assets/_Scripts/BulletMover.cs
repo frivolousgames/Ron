@@ -2,29 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletMover : MonoBehaviour
+public class BulletMover : PlayerBulletMover
 {
-    Rigidbody rb;
-    public float bulletSpeed;
-    Vector3 startPos;
-
-    GameObject[] dust;
-    Vector3 hitPoint;
-
-    GameObject[] bulletHoles;
-
-    GameObject[] bloodHits;
-    GameObject[] chunkHits;
-    Vector3 hitNormal;
-
-    Vector3 spawnOffset;
-    GameObject spawnedPool;
-
-    [SerializeField]
-    int damageAmount;
-
-    ObjectPooler pooler;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();

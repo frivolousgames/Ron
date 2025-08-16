@@ -8,7 +8,6 @@ public class FanBladeController : MonoBehaviour
     [SerializeField]
     private UnityEvent hitFloor;
 
-
     Collider hitCollider;
     [SerializeField]
     GameObject groundChunks;

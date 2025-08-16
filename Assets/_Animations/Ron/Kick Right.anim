@@ -29063,10 +29063,17 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
-    functionName: SetShootWait
+  - time: 0.51428574
+    functionName: ResetShootDelay
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 0.543
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.51428574
+    functionName: ResetIsShootEnd
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0

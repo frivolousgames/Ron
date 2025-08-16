@@ -6,8 +6,7 @@ public class ShotgunCollider : MonoBehaviour
 {
     BoxCollider col;
 
-    [SerializeField]
-    int damageAmount;
+    //int damageAmount;
 
 
     GameObject[] bloodSpurts;
@@ -22,6 +21,7 @@ public class ShotgunCollider : MonoBehaviour
     {
         col = GetComponent<BoxCollider>();
         pooler = new ObjectPooler();
+        //damageAmount = PlayerInfo.weaponPower[PlayerController.currentWeapon];
     }
 
     private void Start()

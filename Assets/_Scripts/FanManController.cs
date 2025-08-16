@@ -27,6 +27,9 @@ public class FanManController : MonoBehaviour
     [SerializeField]
     GameObject wiring;
 
+    [SerializeField]
+    Collider weaponCol;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -38,6 +41,7 @@ public class FanManController : MonoBehaviour
     private void OnEnable()
     {
         spinning = true;
+        weaponCol.enabled = true;
     }
 
     private void OnDisable()
@@ -73,6 +77,7 @@ public class FanManController : MonoBehaviour
     {
         spinning = false;
         rb.velocity = Vector3.zero;
+        weaponCol.enabled = false;
     }
 
     IEnumerator AttackRoutine()

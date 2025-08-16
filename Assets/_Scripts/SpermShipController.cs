@@ -149,6 +149,8 @@ public class SpermShipController : MonoBehaviour
         currentTurnDistance = Mathf.Abs(frontTrans.position.x - backTrans.position.x);
         SetIsTurning();
         //Debug.Log("IsTurning: " + isTurning);
+        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0f);
+
     }
 
     private void FixedUpdate()

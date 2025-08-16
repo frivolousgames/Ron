@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &843491410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 843491411}
+  - component: {fileID: 843491413}
+  - component: {fileID: 843491412}
+  m_Layer: 22
+  m_Name: WeaponCol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &843491411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843491410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6221145471093421158}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &843491413
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843491410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.73180723, z: 1}
+  m_Center: {x: 0, y: -0.5037667, z: 0}
+--- !u!114 &843491412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843491410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7262a2897876f40bd1df8ccc013041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPower: 3
+  _hitPower: 0
+  isAirborne: 1
+  _isAirborne: 0
 --- !u!1 &218095109831942521
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +2699,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  goochPoopHit:
+    m_PersistentCalls:
+      m_Calls: []
+  inZone:
+    m_PersistentCalls:
+      m_Calls: []
+  outZone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &5899517209897427597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2703,6 +2774,7 @@ MonoBehaviour:
   playerRaycastLayer:
     serializedVersion: 2
     m_Bits: 16384
+  playerRagdoll: {fileID: 0}
   hitBackPower: 5
   frontTrans: {fileID: 5899517210850391219}
   backTrans: {fileID: 5899517211034418694}
@@ -2710,10 +2782,16 @@ MonoBehaviour:
   turnTime: 0
   baseAttackDistance: 3
   postBaseAttackWait: 0.4
-  materialObject: []
+  chaseDistanceMin: 0
+  chaseDistanceMax: 0
+  renderers: []
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
+  hitColorWaitTime: 0
   ragdoll: {fileID: 373637763737365569}
   ragdollRbs: []
   ragdollSpeed: 0
+  invisibleTimeThresh: 0
+  gEnemyScript: {fileID: 0}
   isUnfolded: 0
   unfoldDistance: 4
   kickPower: 275
@@ -2883,6 +2961,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  goochPoopHit:
+    m_PersistentCalls:
+      m_Calls: []
+  inZone:
+    m_PersistentCalls:
+      m_Calls: []
+  outZone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &5899517209960972928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3599,6 +3686,7 @@ Transform:
   - {fileID: 5899517210203692399}
   - {fileID: 5899517209185591473}
   - {fileID: 5899517209960972930}
+  - {fileID: 843491411}
   m_Father: {fileID: 5899517209952028292}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

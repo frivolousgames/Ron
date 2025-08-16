@@ -84,7 +84,7 @@ public class LampManController : UnfoldingEnemies
                 rb.isKinematic = true;
                 while (isFollowing && !isFrozen)
                 {
-                    Debug.Log("Following");
+                    //Debug.Log("Following");
                     FollowPlayer();
                     if (playerDistance < baseAttackDistance)
                     {

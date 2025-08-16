@@ -157,17 +157,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6631948569584866031}
-  - component: {fileID: 6631948569584866029}
   - component: {fileID: 6631948569584866030}
   - component: {fileID: 6631948569584866028}
   - component: {fileID: 5892364092609400276}
+  - component: {fileID: 1148229576}
   m_Layer: 9
   m_Name: SpermBullet
   m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6631948569584866031
 Transform:
   m_ObjectHideFlags: 0
@@ -184,20 +184,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6631948569584866029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6631948569584866024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e025d59a27a9f8343a9c4a4ea9bd34de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 20
-  damageAmount: 2
 --- !u!54 &6631948569584866030
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -268,6 +254,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1148229576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6631948569584866024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3164c923a508e70438ab50cdd24cc373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 20
+  damageAmount: 2
 --- !u!1 &8346572096944006761
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,15 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AirplaneBulletMover : MonoBehaviour
+public class AirplaneBulletMover : PlayerBulletMover
 {
-    Rigidbody rb;
-    public float bulletSpeed;
-    Vector3 startPos;
-    Vector3 hitPoint;
-    Vector3 hitNormal;
-    ObjectPooler pooler;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();

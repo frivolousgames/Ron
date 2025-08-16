@@ -13,8 +13,8 @@ public class PlayerWeaponCollision : MonoBehaviour
 
     public Vector3 spawnOffset;
 
-    [SerializeField]
-    int damageAmount;
+    //[SerializeField]
+    //int damageAmount;
 
     ObjectPooler pooler;
 
@@ -30,7 +30,10 @@ public class PlayerWeaponCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 12)
+        //Debug.Log("Chunk Hits: " + chunkHits[0]);
+        //Debug.Log("BSPos: " + bloodSpawn.position);
+        //Debug.Log("Other:  " + other.gameObject.name);
+        if (other.gameObject.layer == 12)
         {
             //Vector3 spawnPos = other.ClosestPoint(bloodSpawn.position - new Vector3(other.gameObject.transform.position.x, 0f, other.gameObject.transform.position.z));\
             Vector3 spawnPos = other.ClosestPoint(bloodSpawn.position);
@@ -38,6 +41,7 @@ public class PlayerWeaponCollision : MonoBehaviour
         }
         if (other.gameObject.layer == 13)
         {
+
             pooler.PoolObjects(chunkHits, bloodSpawn.position, Quaternion.identity, spawnOffset);
         }
     }

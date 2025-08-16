@@ -4826,13 +4826,13 @@ GameObject:
   - component: {fileID: 2274445212259781951}
   - component: {fileID: 8959564188580927761}
   - component: {fileID: 3121345490250704668}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Marlin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5543684966046908245
 Transform:
   m_ObjectHideFlags: 0
@@ -4864,7 +4864,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 24
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5543684966046908244
 MonoBehaviour:
   m_ObjectHideFlags: 0

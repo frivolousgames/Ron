@@ -46,24 +46,30 @@ public class SingleFishSpawner : MonoBehaviour
 
     void SpawnFish()
     {
-        pooler.PoolObjects(fish[chosenFishIndex], new Vector3(fishSpawnTrans.position.x + (offsetX * SpermShipController.directionX), fishSpawnTrans.position.y + screenOffsetY, fishSpawnTrans.position.z + offsetZ), fishSpawnTrans.rotation, Vector3.zero);
-        Debug.Log("Pos: " + fishSpawnTrans.position.x);
+        Vector3 offset = new Vector3(offsetX * SpermShipController.directionX, screenOffsetY, offsetZ);
+        pooler.PoolObjects(fish[chosenFishIndex], fishSpawnTrans.position, fishSpawnTrans.rotation, offset);
+        //pooler.PoolObjects(fish[chosenFishIndex], new Vector3(fishSpawnTrans.position.x + (offsetX * SpermShipController.directionX), fishSpawnTrans.position.y + screenOffsetY, fishSpawnTrans.position.z + offsetZ), fishSpawnTrans.rotation, Vector3.zero);
     }
 
     IEnumerator SpawnDelay()
     {
-        while(true)
+        while (true)
         {
-            while (!SpermShipController.isTurning)
+            yield return new WaitForSeconds(Random.Range(spawnDelayMin, spawnDelayMax));
+            screenOffsetY = Random.Range(screenOffsetYMin, screenOffsetYMax);
+            //randomize weighted (rare to common) to get chosenFishIndex
+            chosenFishIndex = Random.Range(0, fish.Length); //TEMP
+            while (fish[chosenFishIndex].activeInHierarchy)
             {
-                yield return new WaitForSeconds(Random.Range(spawnDelayMin, spawnDelayMax));
-                screenOffsetY = Random.Range(screenOffsetYMin, screenOffsetYMax);
-                //randomize weighted (rare to common) to get chosenFishIndex
-                chosenFishIndex = 2; //TEMP
-                SpawnFish();
+                //randomize fish
                 yield return null;
             }
-            yield return null;    
+            while (SpermShipController.isTurning)
+            {
+                yield return null;
+            }
+            SpawnFish();
+            yield return null;
         }
     }
 }

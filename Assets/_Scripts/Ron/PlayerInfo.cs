@@ -37,9 +37,9 @@ public class PlayerInfo : MonoBehaviour
     float butcherKnifeShootWait = .475f;
     float revolverShootWait = .55f;
     float shotgunShootWait = .625f;
-    float reamerShootWait = .7455f;
-    float acousticShootWait = .792f;
-    float punisherShootWait = .792f;
+    float reamerShootWait = .257f;
+    float acousticShootWait = .257f;
+    float punisherShootWait = .5715f;
     float uziShootWait = .1f;
 
     public static float[] raiseWait;
@@ -74,6 +74,17 @@ public class PlayerInfo : MonoBehaviour
     bool acousticAimable = false;
     bool punisherAimable = false;
     bool uziAimable = true;
+
+    public static bool[] automatic;
+
+    bool fistsAuto = false;
+    bool butcherKnifeAuto = false;
+    bool revolverAuto = true;
+    bool shotgunAuto = true;
+    bool reamerAuto = false;
+    bool acousticAuto = false;
+    bool punisherAuto = false;
+    bool uziAuto = true;
 
     public static int[] bulletSpawn;
 
@@ -227,6 +238,18 @@ public class PlayerInfo : MonoBehaviour
             acousticAimable,
             punisherAimable,
             uziAimable
+        };
+
+        automatic = new bool[]
+        {
+            fistsAuto,
+            butcherKnifeAuto,
+            revolverAuto,
+            shotgunAuto,
+            reamerAuto,
+            acousticAuto,
+            punisherAuto,
+            uziAuto
         };
 
         bulletSpawn = new int[]
