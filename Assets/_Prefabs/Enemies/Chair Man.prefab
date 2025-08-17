@@ -25,12 +25,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843491410}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7064276, y: -0, z: -0, w: 0.7077853}
+  m_LocalPosition: {x: 0, y: 0.004117943, z: -0.0072324495}
+  m_LocalScale: {x: 0.01, y: 0.010000002, z: 0.010000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6221145471093421158}
+  m_Father: {fileID: 3388733003475784686}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &843491413
@@ -322,6 +322,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 715514066039134239}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &715514066039134240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,6 +470,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 715514066281587785}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &715514066281587786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,6 +618,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 715514066292540120}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &715514066292540121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,6 +766,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 715514066917456185}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &715514066917456186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,6 +914,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 715514066927724505}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &715514066927724506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1062,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 715514067050495417}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &715514067050495418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,6 +1210,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 715514067405949687}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &715514067405949688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,6 +1358,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 715514067423407225}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &715514067423407226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1498,6 +1506,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 715514067857424037}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &715514067857424038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1645,6 +1654,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 4797123166372698714}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &4797123166372698715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1875,6 +1885,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 7515182534547810067}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &7515182534547810068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2022,6 +2033,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 8590191137087574389}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &8590191137087574390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2867,7 +2879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f5d3b1b8945b845be1361983af90c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
+  maxHealth: 10
   health: 0
   die:
     m_PersistentCalls:
@@ -3636,6 +3648,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 6786372213531421391}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &6786372213531421392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3686,7 +3699,6 @@ Transform:
   - {fileID: 5899517210203692399}
   - {fileID: 5899517209185591473}
   - {fileID: 5899517209960972930}
-  - {fileID: 843491411}
   m_Father: {fileID: 5899517209952028292}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -3726,6 +3738,7 @@ Transform:
   - {fileID: 5899517210431298183}
   - {fileID: 1935662018050357351}
   - {fileID: 5899517209897427599}
+  - {fileID: 843491411}
   m_Father: {fileID: 5374076961723276184}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3910,6 +3923,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 7572942995269034688}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &7572942995269034689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4057,6 +4071,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 7515319772079220114}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &7515319772079220115
 MonoBehaviour:
   m_ObjectHideFlags: 0

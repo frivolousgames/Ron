@@ -12,6 +12,9 @@ public class RagdollLimbController : MonoBehaviour
 
     List<Vector3> bonePos;
 
+    [SerializeField]
+    Transform downDir;
+
     private void Awake()
     {
         bonePos = new List<Vector3>();
@@ -27,6 +30,10 @@ public class RagdollLimbController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        
+    }
     private void OnDisable()
     {
         for(int i = 0; i < boneRb.Length; i++)

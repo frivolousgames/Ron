@@ -1949,8 +1949,9 @@ public class PlayerController : MonoBehaviour
                 anim.SetLayerWeight(activeWeaponLayer, 0);
                 Vector3 dir  = (transform.position - PlayerHitController.hitPos).normalized;
                 rb.AddForce(new Vector3(dir.x, airHitHeight, dir.z) * airHitPower, ForceMode.Impulse);
-                Debug.Log("Airborne Dir: " + new Vector3(dir.x, airHitHeight, dir.z));
+                TotalReset();
                 anim.SetTrigger("airborne");
+                //Debug.Log("Airborne Dir: " + new Vector3(dir.x, airHitHeight, dir.z));
             }
             if (hitFront)
             {
@@ -2024,6 +2025,14 @@ public class PlayerController : MonoBehaviour
         {
             isAirborneHit = true;
         }
+    }
+
+    void TotalReset()//Add anything here that needs to revert before going airborne
+    {
+        isShootEnd = false;
+        isShooting = false;
+        isContinueShooting = false;
+        isThrowingWeapon = false;
     }
 
     IEnumerator GrabWait()

@@ -15,6 +15,7 @@ public class PlayerHitController : MonoBehaviour
     public static int hitPower;
     public static bool isAirborne;
     Collider col;
+    ObjectPooler pooler;
 
     //Health
     [SerializeField]
@@ -26,7 +27,7 @@ public class PlayerHitController : MonoBehaviour
         col = GetComponent<Collider>();
         isHit = false;
         isGrabbed = false;
-
+        pooler = new ObjectPooler();
     }
 
     private void OnEnable()
@@ -50,6 +51,7 @@ public class PlayerHitController : MonoBehaviour
                 //Debug.Log("HitController Hit");
                 //hitPos = other.gameObject.transform.position;
                 hitPos = col.ClosestPoint(other.transform.position);
+                pooler.PoolObjects(PooledObjectArrays.bloodHitsArray, hitPos, Quaternion.identity, Vector3.zero);
                 hitPower = other.gameObject.GetComponent<EnemyWeapon>()._hitPower;
                 isAirborne = other.gameObject.GetComponent<EnemyWeapon>()._isAirborne;
                 hit.Invoke();

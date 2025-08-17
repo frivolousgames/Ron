@@ -38,7 +38,7 @@ public class EnemyBulletMover : MonoBehaviour
         }
         else if (other.gameObject.layer == 18)
         {
-            pooler.PoolObjects(bloodHits, hitPoint - other.gameObject.transform.position * Random.Range(.0001f, .0009f), Quaternion.LookRotation(hitNormal), spawnOffset);
+            //pooler.PoolObjects(bloodHits, hitPoint - other.gameObject.transform.position * Random.Range(.0001f, .0009f), Quaternion.LookRotation(hitNormal), spawnOffset);
             gameObject.SetActive(false);
         }
     }

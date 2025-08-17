@@ -193,6 +193,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 1110482217126211172}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &1110482217126211178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +341,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 1730020128726102951}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &1730020128726102949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +489,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 3337016647714225884}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &3337016647714225890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,6 +754,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 5221557059550558735}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &5221557059550558729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6551,6 +6555,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 5221557060656204144}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &5221557060656204146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6698,6 +6703,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 5221557060681896041}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &5221557060681896043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6975,6 +6981,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 258592466112884425}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &258592466112884431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7123,6 +7130,7 @@ MonoBehaviour:
   boneRb:
   - {fileID: 4310382351046794442}
   rbSpeed: 10
+  downDir: {fileID: 0}
 --- !u!114 &4310382351046794440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8069,7 +8077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f5d3b1b8945b845be1361983af90c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 16
+  maxHealth: 20
   health: 0
   die:
     m_PersistentCalls:

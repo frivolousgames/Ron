@@ -61,7 +61,7 @@ public class LampManController : UnfoldingEnemies
         isPoopedOn = !gEnemyScript.isTargetable;
         //Debug.Log("isFrozen: " + isFrozen);
         Unfold();
-        ReactToPlayer();
+        //ReactToPlayer();
         GoochHit(PlayerFollowRoutine());
     }
 
