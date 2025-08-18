@@ -52,7 +52,7 @@ public class MicrowaveManController : UnfoldingEnemies
     protected override IEnumerator PlayerFollowRoutine()
     {
         float h = 0;
-        while (h < 200)
+        while (h < 10)
         {
             TurnAfterAttack(h);
             h += turnSpeed;
@@ -82,7 +82,7 @@ public class MicrowaveManController : UnfoldingEnemies
             yield return new WaitForSeconds(postBaseAttackWait);
             float i = 0;
 
-            while (i < 200)
+            while (i < 10)
             {
                 TurnAfterAttack(i);
                 i += turnSpeed;

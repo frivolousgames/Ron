@@ -69,6 +69,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float groundRayDist;
 
+    bool isDiarrhea;
+    int diarrheaLayer;
+    [SerializeField]
+    float diarrheaSpeed;
+
     ///WEAPONS////
     public bool hasKnife;
     public bool hasFists;
@@ -245,6 +250,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         moveSpeed = walkSpeed;
 
+        diarrheaLayer = anim.GetLayerIndex("Diarrhea");
+
         //INTERACTABLE
         interactables = new List<GameObject>();
 
@@ -254,6 +261,7 @@ public class PlayerController : MonoBehaviour
         idleRotation = Quaternion.Euler(0f, 90f, 0f);
 
         pooler = new ObjectPooler();
+        isDiarrhea = true; //TEMP
     }
 
     private void OnEnable()
@@ -312,6 +320,9 @@ public class PlayerController : MonoBehaviour
         {
             Stopped();
         }
+
+        HasDiarrhea();
+
         //DropFromLedge();
         //ClimbUpOnLedge();
 
@@ -478,7 +489,7 @@ public class PlayerController : MonoBehaviour
                 {
                     moveSpeed = jumpSpeed;
                 }
-                else if(isRunning)
+                else if(isRunning && !isDiarrhea)
                 {
                     if (Mathf.Abs(rotDifference) > 35)
                     {
@@ -488,6 +499,17 @@ public class PlayerController : MonoBehaviour
                     {
                         moveSpeed = runSpeed;
                     } 
+                }
+                else if (isDiarrhea)
+                {
+                    if (Mathf.Abs(rotDifference) > 35)
+                    {
+                        moveSpeed = 0f;
+                    }
+                    else
+                    {
+                        moveSpeed = diarrheaSpeed;
+                    }
                 }
                 else
                 {
@@ -899,7 +921,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    void HasDiarrhea()
+    {
+        if (isDiarrhea)
+        {
+            anim.SetLayerWeight(diarrheaLayer, 1f);
+        }
+        else
+        {
+            anim.SetLayerWeight(diarrheaLayer, 0f);
+        }
+    }
 
     public void GrabLedge()
     {
