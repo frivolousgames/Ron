@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
     int diarrheaLayer;
     [SerializeField]
     float diarrheaSpeed;
+    bool isDiarrheaReset;
 
     ///WEAPONS////
     public bool hasKnife;
@@ -846,7 +847,7 @@ public class PlayerController : MonoBehaviour
     {
         if(isMoving)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isDiarrhea)
             {
                 if(!isRunning)
                 {
@@ -858,6 +859,10 @@ public class PlayerController : MonoBehaviour
                     isRunning = false;
 
                 }
+            }
+            else if (isDiarrhea)
+            {
+                isRunning = false;
             }
         }
     }
@@ -923,13 +928,16 @@ public class PlayerController : MonoBehaviour
 
     void HasDiarrhea()
     {
-        if (isDiarrhea)
+        if (!isHit && !isDiarrheaReset)
         {
-            anim.SetLayerWeight(diarrheaLayer, 1f);
-        }
-        else
-        {
-            anim.SetLayerWeight(diarrheaLayer, 0f);
+            if (isDiarrhea)
+            {
+                anim.SetLayerWeight(diarrheaLayer, 1f);
+            }
+            else
+            {
+                anim.SetLayerWeight(diarrheaLayer, 0f);
+            }
         }
     }
 
@@ -1976,6 +1984,10 @@ public class PlayerController : MonoBehaviour
             SetHitDirection();
             SetAirborneHit();
             ResetIdle();
+            if (isDiarrhea)
+            {
+                anim.SetLayerWeight(diarrheaLayer, 0f);
+            }
             if (isAirborneHit)
             {
                 anim.SetLayerWeight(activeWeaponLayer, 0);
@@ -1983,6 +1995,7 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(new Vector3(dir.x, airHitHeight, dir.z) * airHitPower, ForceMode.Impulse);
                 TotalReset();
                 anim.SetTrigger("airborne");
+                
                 //Debug.Log("Airborne Dir: " + new Vector3(dir.x, airHitHeight, dir.z));
             }
             if (hitFront)
@@ -2018,7 +2031,13 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("VEL: " + rb.velocity.magnitude);
             yield return null;
         }
-        StartCoroutine(WeaponLayerAdd());
+        StartCoroutine(GradualLayerAdd(activeWeaponLayer, .08f));
+        if (isDiarrhea)
+        {
+            isDiarrheaReset = true;
+            StartCoroutine(GradualLayerAdd(diarrheaLayer, .15f));
+            StartCoroutine(DiarrheaWait());
+        }
         isAirborneHit = false;
         PersistantPlayerData.isGrabbed = false;
         PlayerHitController.isHit = false;
@@ -2075,15 +2094,26 @@ public class PlayerController : MonoBehaviour
         //Debug.Log("Grabbed :" + PersistantPlayerData.otherGameObject.name);
     }
 
-    IEnumerator WeaponLayerAdd()
+    IEnumerator GradualLayerAdd(int layer, float speed)
     {
-        float i = .05f;
+        float i = speed;
         float j;
-        while(anim.GetLayerWeight(activeWeaponLayer) < 1f)
+        while(anim.GetLayerWeight(layer) < 1f)
         {
-            j = anim.GetLayerWeight(activeWeaponLayer);
-            anim.SetLayerWeight(activeWeaponLayer, j + i);
+            j = anim.GetLayerWeight(layer);
+            anim.SetLayerWeight(layer, j + i);
             yield return null;
         }
+        yield break;
+    }
+
+    IEnumerator DiarrheaWait()
+    {
+        while(isDiarrheaReset)
+        {
+            yield return null;
+        }
+        isDiarrheaReset = false;
+        yield break;
     }
 }
