@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnderwaterRagdollMain : MonoBehaviour
 {
-    public void SetInactive()
+    public void SetInactive()// Add to callback event of blood particle system
     {
         gameObject.SetActive(false);
     }

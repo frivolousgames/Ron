@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
 
 public class SpermShipController : MonoBehaviour
@@ -96,6 +97,20 @@ public class SpermShipController : MonoBehaviour
     float currentTurnDistance;
     public static bool isTurning;
     bool midTurn;
+
+    ///HIT///
+    public bool isHit;
+    [SerializeField]
+    float hitWait;
+    [SerializeField]
+    UnityEvent damage;
+    [SerializeField]
+    Animator anim;
+
+    ///Health///
+    [SerializeField]
+    UnityEvent addHealth;
+
     private void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
@@ -125,6 +140,7 @@ public class SpermShipController : MonoBehaviour
     private void Start()
     {
         shootWait = PlayerInfo.vehicleWeaponShootWait[1];
+        //Debug.Log("ShootWait: " + shootWait);
         shootRoutine = StartCoroutine(Shoot());
     }
 
@@ -139,7 +155,7 @@ public class SpermShipController : MonoBehaviour
         //rotMovement = new Vector3(0f, 0f, Input.GetAxisRaw("Horizontal"));
         SetDirX();
         SetDirY();
-        
+
         PropellerRotate();
         PropPostMoverX();
         PropPostMoverZ();
@@ -151,6 +167,7 @@ public class SpermShipController : MonoBehaviour
         //Debug.Log("IsTurning: " + isTurning);
         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0f);
 
+        anim.SetBool("isHit", isHit);
     }
 
     private void FixedUpdate()
@@ -160,7 +177,7 @@ public class SpermShipController : MonoBehaviour
 
     void Move()
     {
-        if(movement.magnitude > 0)
+        if (movement.magnitude > 0)
         {
             lookRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(rotMovement, Vector3.up), 360f * Time.deltaTime * turnSpeed);
             rb.MoveRotation(lookRotation);
@@ -187,7 +204,7 @@ public class SpermShipController : MonoBehaviour
 
     void StopTurningMovement()
     {
-        if(!isTurning)
+        if (!isTurning)
         {
             midTurn = false;
             movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f).normalized;
@@ -207,7 +224,7 @@ public class SpermShipController : MonoBehaviour
 
     void SetDirX()
     {
-        if(movement.x > 0f)
+        if (movement.x > 0f)
         {
             dirX = 1f;
         }
@@ -236,7 +253,7 @@ public class SpermShipController : MonoBehaviour
             {
                 pooler.PoolObjects(PooledObjectArrays.spermBulletArrays, bulletSpawn.position, bulletSpawn.rotation, Vector3.zero);
                 int i = 0;
-                foreach(GameObject flash in muzzleFlashes)
+                foreach (GameObject flash in muzzleFlashes)
                 {
                     muzzleFlashes[i].SetActive(true);
                     float xy = Random.Range(muzzleFlashX - 0.2f, muzzleFlashX + 0.2f);
@@ -255,7 +272,7 @@ public class SpermShipController : MonoBehaviour
         {
             if (!isAccelerating)
             {
-                if(dec != null)
+                if (dec != null)
                 {
                     StopCoroutine(dec);
                 }
@@ -299,10 +316,10 @@ public class SpermShipController : MonoBehaviour
         isAccelerating = false;
         float f = 0f;
         float j = 1f;
-        float k = propSpeedMulti/10;
+        float k = propSpeedMulti / 10;
         while (currentPropSpeed > 0f)
         {
-            if(currentPropSpeed > 2f)
+            if (currentPropSpeed > 2f)
             {
                 f += propSpeedMulti;
             }
@@ -313,7 +330,7 @@ public class SpermShipController : MonoBehaviour
             j -= propSpeedMulti;
             float speed = Mathf.SmoothStep(maxPropSpeed, 0f, f);
             currentPropSpeed = speed;
-            if(j > 1f)
+            if (j > 1f)
             {
                 //propPSMain.startSpeed = j;
             }
@@ -339,7 +356,7 @@ public class SpermShipController : MonoBehaviour
                 }
                 postTurnXAcc = StartCoroutine(TurnXAcc());
             }
-            
+
         }
         else
         {
@@ -384,7 +401,7 @@ public class SpermShipController : MonoBehaviour
     {
         isTurningX = true;
         float f = 0f;
-        while(currentPostAngleX < 34)
+        while (currentPostAngleX < 34)
         {
             f += postSpeedMulti;
             float speed = Mathf.Lerp(0f, 34, f);
@@ -403,7 +420,7 @@ public class SpermShipController : MonoBehaviour
             f += postSpeedMulti;
             float speed = Mathf.Lerp(34f, 0f, f);
             currentPostAngleX = speed;
-            
+
             yield return null;
         }
         yield return null;
@@ -453,7 +470,7 @@ public class SpermShipController : MonoBehaviour
 
     void SetIsTurning()
     {
-        if(currentTurnDistance + 0.06f < startTurnDistance)
+        if (currentTurnDistance + 0.06f < startTurnDistance)
         {
             isTurning = true;
         }
@@ -461,5 +478,30 @@ public class SpermShipController : MonoBehaviour
         {
             isTurning = false;
         }
+    }
+
+    ///HIT///
+    public void HitController()
+    {
+        if (!isHit)
+        {
+            isHit = true;
+            damage.Invoke();
+            StartCoroutine(HitWait());
+        }
+    }
+
+    //public void ResetIsHit()
+    //{
+    //    PlayerHitController.isHit = false;
+    //    isHit = false;
+    //}
+
+    IEnumerator HitWait()
+    {
+        yield return new WaitForSeconds(hitWait);
+        PlayerHitController.isHit = false;
+        isHit = false;
+        yield break;
     }
 }

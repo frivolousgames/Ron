@@ -27,7 +27,7 @@ public class FadeColorOverTime : MonoBehaviour
         StopCoroutine(FadeOut());
         fadeMat.color = originalColor;
     }
-    IEnumerator FadeOut()
+    IEnumerator FadeOut() // Set material to transparent
     {
         yield return new WaitForSeconds(fadeWait);
         float i = 1;
@@ -38,6 +38,6 @@ public class FadeColorOverTime : MonoBehaviour
             //Debug.Log("Color: " + fadeMat.color.a);
             yield return null;
         }
-        gameObject.SetActive(false);
+        gameObject.SetActive(false);//Switch to event callback possibly
     }
 }

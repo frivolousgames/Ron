@@ -4832,7 +4832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4014710927481361874
 Transform:
   m_ObjectHideFlags: 0
@@ -4861,20 +4861,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24074b43c328464bab85bcdb169438d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 0
-  escapeSpeed: 0
+  speedMin: -120
+  speedMax: -130
   minHeight: 0.2
   maxHeight: 0.4
   heightSpeedMin: 1
   heightSpeedMax: 2
   anim: {fileID: 4014710926283583012}
-  animNormalSpeed: 0
-  animEscapeSpeed: 0
   onVis: {fileID: 4014710927233791449}
   inactiveWait: 4
+  ragdollKey: Sea Turtle
   ps: {fileID: 4014710926071286196}
-  speedMin: -120
-  speedMax: -130
 --- !u!54 &4014710927481361873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5107,6 +5104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sea Turtle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cddf8d8f713d008498e98e5f04e74ebe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1223702183216867525, guid: cddf8d8f713d008498e98e5f04e74ebe,
         type: 3}

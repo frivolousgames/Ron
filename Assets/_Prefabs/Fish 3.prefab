@@ -4826,7 +4826,7 @@ GameObject:
   - component: {fileID: 784407452}
   - component: {fileID: 5353182914808666206}
   - component: {fileID: 5023977144951036122}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Fish 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4877,20 +4877,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24074b43c328464bab85bcdb169438d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 0
-  escapeSpeed: 0
+  speedMin: -200
+  speedMax: -230
   minHeight: 0.2
   maxHeight: 0.4
   heightSpeedMin: 1
   heightSpeedMax: 2
   anim: {fileID: 387595852660755401}
-  animNormalSpeed: 0
-  animEscapeSpeed: 0
   onVis: {fileID: 9104588873223307123}
   inactiveWait: 4
+  ragdollKey: Small
   ps: {fileID: 378394149}
-  speedMin: -200
-  speedMax: -230
 --- !u!114 &784407452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4951,7 +4948,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 784407452}
         m_TargetAssemblyTypeName: EnemyHealth, Assembly-CSharp
-        m_MethodName: IsHit
+        m_MethodName: VehicleIsHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

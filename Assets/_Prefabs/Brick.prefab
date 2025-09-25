@@ -115,7 +115,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 40cc2137fbb798340b876b238979eb9f, type: 2}
+      objectReference: {fileID: 2100000, guid: e007c74fbc297f54d9b506de130150bd, type: 2}
     - target: {fileID: 919132149155446097, guid: d73528810d25c884ebae2bb2f77f7450,
         type: 3}
       propertyPath: m_Name
@@ -142,6 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 0}
+  bricks: {fileID: 0}
+  brickRemnants: {fileID: 0}
+  particles: {fileID: 0}
 --- !u!4 &702130367588578928 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d73528810d25c884ebae2bb2f77f7450,

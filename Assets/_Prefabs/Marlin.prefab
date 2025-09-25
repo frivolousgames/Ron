@@ -4877,20 +4877,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24074b43c328464bab85bcdb169438d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 0
-  escapeSpeed: 0
+  speedMin: -180
+  speedMax: -210
   minHeight: 0.3
   maxHeight: 0.6
   heightSpeedMin: 0.4
   heightSpeedMax: 1
   anim: {fileID: 4367744346172001746}
-  animNormalSpeed: 0
-  animEscapeSpeed: 0
   onVis: {fileID: 4367744346084772116}
   inactiveWait: 4
+  ragdollKey: Marlin
   ps: {fileID: 4367744344368019662}
-  speedMin: -180
-  speedMax: -210
 --- !u!114 &2274445212259781951
 MonoBehaviour:
   m_ObjectHideFlags: 0

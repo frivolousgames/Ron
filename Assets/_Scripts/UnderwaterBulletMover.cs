@@ -11,7 +11,7 @@ public class UnderwaterBulletMover : PlayerBulletMover
         rb = GetComponent<Rigidbody>();
         spawnOffset = new Vector3(0f, 0f, -.5f);
 
-        bloodHits = PooledObjectArrays.bloodHitsArray;
+        bloodHits = PooledObjectArrays.gooParticleArrays;
         chunkHits = PooledObjectArrays.chunkHitsArray;
         bulletHoles = PooledObjectArrays.bulletHolesArray;
         dust = PooledObjectArrays.bulletDustArray;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnderwaterRagdollParts : MonoBehaviour
 {
-    [SerializeField]
+    //[SerializeField]
     float speed;
     Vector3 direction;
     Vector3 startPos;
@@ -34,9 +34,10 @@ public class UnderwaterRagdollParts : MonoBehaviour
 
     private void OnEnable()
     {
-        direction = new Vector3(0f, Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        direction = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0f);
         rotation = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
         rotSpeed = Random.Range(2f, 4f);
+        speed = Random.Range(.01f, .02f);
         for (int i = 0; i < oMatColors.Count; i++)
         {
             StartCoroutine(FadeOut(i));
@@ -59,20 +60,7 @@ public class UnderwaterRagdollParts : MonoBehaviour
         }
     }
 
-    //IEnumerator FadeOut(int index)
-    //{
-    //    yield return new WaitForSeconds(fadeWait);
-    //    Color col = oMatColors[index];
-    //    while (col.a > .001f)
-    //    {
-    //        col = Color.Lerp(meshRenderer.sharedMaterials[index].color, Color.clear, fadeSpeed * Time.deltaTime);
-    //        meshRenderer.sharedMaterials[index].color = col;
-    //        Debug.Log("Col: " + meshRenderer.sharedMaterials[index].color);
-    //        yield return null;
-    //    }
-    //}
-
-    IEnumerator FadeOut(int index)
+    IEnumerator FadeOut(int index) //Set material(s) to transparent
     {
         yield return new WaitForSeconds(fadeWait);
         float a = 1f;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBulletMover : MonoBehaviour
+public abstract class EnemyBulletMover : MonoBehaviour
 {
     protected Rigidbody rb;
     [SerializeField]

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8675737461075185894}
   - component: {fileID: 8675737461075185893}
   - component: {fileID: 1299357541}
+  - component: {fileID: 1299357542}
   m_Layer: 0
   m_Name: Fish 1
   m_TagString: Untagged
@@ -63,20 +64,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24074b43c328464bab85bcdb169438d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 0
-  escapeSpeed: 0
+  speedMin: -200
+  speedMax: -230
   minHeight: 0.2
   maxHeight: 0.4
   heightSpeedMin: 1
   heightSpeedMax: 2
   anim: {fileID: 6655943120936276333}
-  animNormalSpeed: 0
-  animEscapeSpeed: 0
   onVis: {fileID: 6655943119357739977}
   inactiveWait: 4
+  ragdollKey: Small
   ps: {fileID: 6655943120029145252}
-  speedMin: -200
-  speedMax: -230
 --- !u!114 &1299357541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +105,33 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   isDead: 0
+--- !u!114 &1299357542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675737461075185891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b812d52e6dbd754a9bd1ff7acdda2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1299357541}
+        m_TargetAssemblyTypeName: EnemyHealth, Assembly-CSharp
+        m_MethodName: VehicleIsHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &6655943120339865033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,7 +238,7 @@ PrefabInstance:
     - target: {fileID: 2952577466967994873, guid: 4df835d744f3f6f4f81ba38eeab77b48,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df835d744f3f6f4f81ba38eeab77b48, type: 3}

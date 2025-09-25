@@ -12,7 +12,9 @@ public class BloodStreakController : MonoBehaviour
     ParticleSystem ps;
     ParticleSystem.MainModule mainModule;
     [SerializeField]
-    float stopDelay;
+    float stopDelayMin;
+    [SerializeField]
+    float stopDelayMax;
 
     private void Awake()
     {
@@ -40,7 +42,7 @@ public class BloodStreakController : MonoBehaviour
 
     IEnumerator StopWait()
     {
-        yield return new WaitForSeconds(stopDelay);
+        yield return new WaitForSeconds(Random.Range(stopDelayMin, stopDelayMax));
         mainModule.loop = false;
         velocity = 0f;
         yield break;

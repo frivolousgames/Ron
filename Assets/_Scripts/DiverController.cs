@@ -7,6 +7,21 @@ public class DiverController : UnfoldingEnemies
 {
     [SerializeField]
     float moveSpeed;
+
+    [SerializeField]
+    Transform arrowSpawn;
+
+    //[SerializeField]
+    //bool isReloading;
+
+    ObjectPooler pooler;
+
+    //Arm//
+    [SerializeField]
+    Transform armTrans;
+    Quaternion lookRot;
+    bool isAiming;
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
@@ -16,6 +31,8 @@ public class DiverController : UnfoldingEnemies
         Debug.Log("Player: " + player.name);
         startSpawnPos = transform.position;
         startSpawnRot = transform.rotation;
+
+        pooler = new ObjectPooler();
     }
 
     private void Start()
@@ -67,11 +84,16 @@ public class DiverController : UnfoldingEnemies
                 }
                 yield return null;
             }
-            Shoot();
+            isAiming = true;
+            //StartCoroutine(ArmTurn());
             while (isAttacking)
             {
                 yield return null;
             }
+            //while (!isReloading)
+            //{
+            //    yield return null;
+            //}
             yield return new WaitForSeconds(postBaseAttackWait);
             float i = 0;
             isTurning = true;
@@ -86,18 +108,6 @@ public class DiverController : UnfoldingEnemies
             yield return null;
         }
     }
-
-    void Shoot()
-    {
-
-    }
-    //protected override void TurnAfterAttack(float i)
-    //{
-    //    //isTurning = true;
-    //    Vector3 playerFixedPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-    //    turnRotation = Quaternion.LookRotation(playerFixedPos - transform.position).normalized;
-    //    transform.rotation = Quaternion.RotateTowards(transform.rotation, turnRotation, i);
-    //}
 
     private void OnBecameInvisible()
     {
@@ -130,5 +140,70 @@ public class DiverController : UnfoldingEnemies
         isFollowing = false;
         isMoving = false;
         isAttacking = true;
+    }
+    //protected override void TurnAfterAttack(float i)
+    //{
+    //    //isTurning = true;
+    //    Vector3 playerFixedPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+    //    turnRotation = Quaternion.LookRotation(playerFixedPos - transform.position).normalized;
+    //    transform.rotation = Quaternion.RotateTowards(transform.rotation, turnRotation, i);
+    //}
+
+    //public void ResetIsReloading()
+    //{
+    //    isReloading = false;
+    //}
+    public void Shoot()
+    {
+        pooler.PoolObjects(PooledObjectArrays.milkBulletArrays, arrowSpawn.position, arrowSpawn.rotation, Vector3.zero);
+    }
+
+    //private void LateUpdate()
+    //{
+    //    if (isAiming)
+    //    {
+    //        Debug.Log("Aiming");
+    //        lookRot = Quaternion.RotateTowards(armTrans.localRotation, Quaternion.LookRotation(player.transform.position, Vector3.up), 360f * Time.deltaTime * turnSpeed);
+    //        //armTrans.localRotation = lookRot;
+    //        armTrans.localRotation = Quaternion.LookRotation(player.transform.position, Vector3.up);
+
+    //    }
+    //}
+    IEnumerator ArmTurn()
+    {
+        while (isAiming)
+        {
+            lookRot = Quaternion.RotateTowards(armTrans.localRotation, Quaternion.LookRotation(player.transform.position, Vector3.up), 360f * Time.deltaTime * turnSpeed);
+            //armTrans.localRotation = lookRot;
+            armTrans.localRotation = Quaternion.LookRotation(player.transform.position, Vector3.up);
+            yield return null;
+        }
+        yield break;
+    }
+
+    public void ResetIsAiming()
+    {
+        isAiming = false;
+    }
+
+    private void OnAnimatorIK(int layerIndex)
+    {
+        if (isAiming)
+        {
+            armTrans.localRotation = Quaternion.LookRotation(player.transform.position, Vector3.up);
+        }
+    }
+
+    public override void Die()
+    {
+        isDead = true;
+        if (ragdoll != null)
+        {
+            ragdoll.transform.position = transform.position;
+            ragdoll.transform.rotation = transform.rotation;
+            ragdoll.SetActive(true);
+            //Debug.Log(ragdollDirection);
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -3,7 +3,12 @@ guid: 3871526bc3b57424d9fafff47d76ec79
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jorts Button
+    second: {fileID: 2100000, guid: cc465bcaabab8ca42ae21b232eca8ff6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -69,7 +74,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0

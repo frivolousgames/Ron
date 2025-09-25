@@ -1,3 +1,4 @@
+using RootMotion.FinalIK;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +8,9 @@ public abstract class SwimmingBackgroundAnimals : MonoBehaviour
     protected Rigidbody rb;
 
     [SerializeField]
-    protected float normalSpeed;
+    protected float speedMin;
     [SerializeField]
-    protected float escapeSpeed;
+    protected float speedMax;
     protected float currentSpeed;
 
     [SerializeField]
@@ -25,14 +26,50 @@ public abstract class SwimmingBackgroundAnimals : MonoBehaviour
 
     [SerializeField]
     protected Animator anim;
-    [SerializeField]
-    protected float animNormalSpeed;
-    [SerializeField]
-    protected float animEscapeSpeed;
     protected float currentAnimSpeed;
     protected float animOffset;
 
+    [SerializeField]
+    protected OnVisibleOffScreen onVis;
+
+    [SerializeField]
+    protected float inactiveWait;
+
+    protected ObjectPooler pooler;
+    [SerializeField]
+    protected string ragdollKey;
+    protected GameObject[] ragdolls;
+
+    [SerializeField]
+    protected ParticleSystem ps;
+
     protected Coroutine setInactiveWait;
 
+    protected virtual void SetInactiveByTime()
+    {
+        setInactiveWait = StartCoroutine(SetInactiveWait());
+    }
 
+    protected virtual IEnumerator SetInactiveWait()
+    {
+        //Debug.Log("Started");
+        yield return new WaitForSeconds(inactiveWait);
+        while (onVis.isVisible)
+        {
+            yield return null;
+        }
+        ps.Stop();
+        while (ps.IsAlive())
+        {
+            yield return null;
+        }
+        gameObject.SetActive(false);
+        yield break;
+    }
+
+    public virtual void Die()
+    {
+        pooler.PoolObjects(ragdolls, transform.position, transform.rotation, Vector3.zero);
+        gameObject.SetActive(false);
+    }
 }

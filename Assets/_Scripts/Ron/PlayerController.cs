@@ -75,6 +75,9 @@ public class PlayerController : MonoBehaviour
     float diarrheaSpeed;
     bool isDiarrheaReset;
 
+    public bool isPissed;
+    bool alreadyPissed;
+
     ///WEAPONS////
     public bool hasKnife;
     public bool hasFists;
@@ -262,7 +265,8 @@ public class PlayerController : MonoBehaviour
         idleRotation = Quaternion.Euler(0f, 90f, 0f);
 
         pooler = new ObjectPooler();
-        isDiarrhea = true; //TEMP
+        //isDiarrhea = true; //TEMP
+        
     }
 
     private void OnEnable()
@@ -311,6 +315,8 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isClimbingUp", isClimbingUp);
         anim.SetFloat("xMovement", xMovement);
         anim.SetFloat("zMovement", zMovement);
+        anim.SetBool("isPissed", isPissed);
+
 
         if (!freezeMovement)
         {
@@ -323,6 +329,7 @@ public class PlayerController : MonoBehaviour
         }
 
         HasDiarrhea();
+        Pissed(); //TEMP
 
         //DropFromLedge();
         //ClimbUpOnLedge();
@@ -869,7 +876,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (isGrounded && !freezeMovement)
+        if (isGrounded && !freezeMovement && !isDiarrhea)
         {
             if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
             {
@@ -939,6 +946,37 @@ public class PlayerController : MonoBehaviour
                 anim.SetLayerWeight(diarrheaLayer, 0f);
             }
         }
+    }
+
+    void Pissed()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            if (!alreadyPissed && isGrounded && !isHit)
+            {
+                isPissed = true;
+                alreadyPissed = true;
+                StartCoroutine(PissedRoutine());
+            }
+        }
+    }
+    IEnumerator PissedRoutine()
+    {
+        anim.SetLayerWeight(activeWeaponLayer, 0f);
+        activeWeapons[equippedWeapon].SetActive(false);
+        freezeMovement = true;
+        while (isPissed)
+        {
+            yield return null;
+        }
+        activeWeapons[equippedWeapon].SetActive(true);
+        StartCoroutine(GradualLayerAdd(activeWeaponLayer, .08f));
+        while(activeWeaponLayer < 1f)
+        {
+            yield return null;
+        }
+        freezeMovement = false;
+        alreadyPissed = false;
     }
 
     public void GrabLedge()
@@ -1806,6 +1844,7 @@ public class PlayerController : MonoBehaviour
                 if (!openingDoor)
                 {
                     openingDoor = true;
+                    freezeMovement = true;
                     rb.velocity = Vector3.zero;
                     anim.SetTrigger("openDoor");
                     //change from set active to sheathed in future
@@ -1971,6 +2010,17 @@ public class PlayerController : MonoBehaviour
                 pooler.PoolObjects(PooledObjectArrays.throwPoopArray, currentPickupItem.transform.position, currentPickupItem.transform.rotation, Vector3.zero);
                 break;
         }
+    }
+
+    ///Sit Down///
+    void SitDown()
+    {
+
+    }
+
+    IEnumerator SitRoutine()
+    {
+        yield return null;
     }
 
     ///HIT///  Need to set up airborneHitNum that increases on hit to decide when to go airborne.

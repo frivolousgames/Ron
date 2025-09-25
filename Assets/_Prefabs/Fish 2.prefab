@@ -4826,7 +4826,7 @@ GameObject:
   - component: {fileID: 1862213009}
   - component: {fileID: 7189636123231472063}
   - component: {fileID: 3801404159933233074}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Fish 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4877,20 +4877,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24074b43c328464bab85bcdb169438d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 0
-  escapeSpeed: 0
+  speedMin: -200
+  speedMax: -230
   minHeight: 0.2
   maxHeight: 0.4
   heightSpeedMin: 1
   heightSpeedMax: 2
   anim: {fileID: 3105577762742886566}
-  animNormalSpeed: 0
-  animEscapeSpeed: 0
   onVis: {fileID: 546031540549565829}
   inactiveWait: 4
+  ragdollKey: Small
   ps: {fileID: 1792768955}
-  speedMin: -200
-  speedMax: -230
 --- !u!114 &1862213009
 MonoBehaviour:
   m_ObjectHideFlags: 0
