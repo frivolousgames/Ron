@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Arm Bone
+    second: {fileID: 2100000, guid: 9067c3867939d334fb4447158ac77d08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Body
     second: {fileID: 2100000, guid: 5aeee5bfa601f71479ebedf4ec2be2c0, type: 2}
   - first:
@@ -19,6 +24,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Eyes
     second: {fileID: 2100000, guid: 7371f856c04b2f447a73edb35e7b7430, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gums
+    second: {fileID: 2100000, guid: 301f2c5326690574fb80ae41b5c12485, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -57,8 +67,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Mouth
+    second: {fileID: 2100000, guid: a5237465fffdd8d4693fb76fc6dd2aa0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Tanktop
     second: {fileID: 2100000, guid: bcb84a4423cf4294fb264b4861e97f1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teeth
+    second: {fileID: 2100000, guid: 368f0bad39be3634590efe53352d2531, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -99,6 +119,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: earing
     second: {fileID: 2100000, guid: 9388ace968b0b8c479cf2d507eeb2d6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gown
+    second: {fileID: 2100000, guid: b12cb8b3c34608649a35e15d57d1f852, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

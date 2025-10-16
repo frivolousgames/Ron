@@ -102,7 +102,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 687629aa3c3f3d4418ba6091ce1c61b4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_2:
@@ -223,7 +223,7 @@ Material:
     - _Mode: 0
     - _NormalMapSpace: 0
     - _NormalScale: 1
-    - _Normal_Strength_1: 0
+    - _Normal_Strength_1: 1
     - _Normal_Strength_2: 0
     - _OcclusionStrength: 1
     - _OpaqueCullMode: 2
@@ -239,7 +239,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Smoothness: 0.630137
+    - _Smoothness: 0.87
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0
