@@ -111,7 +111,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_6d7e9b9acd9c489998119999a75b6224_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 471ed638558c0374081730b210608d39, type: 3}
+        m_Texture: {fileID: 2800000, guid: fafb1d8ae438d4045b94b390f535dddb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_6d93b4ede80e45df808640561fbf7ad0_Texture_1:
@@ -123,7 +123,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_f4df18ebc07140c098c246178c906714_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 89ebb18f1e0a50543a93783daaa7fff8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1c8272d1811888a41b35b22a1372627a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_f9a8515cec4a49ba87f93ab7a7f9c561_Texture_1:
@@ -242,6 +242,7 @@ Material:
     - _NormalScale: 1.45
     - _NormalStrength: 0.12
     - _OcclusionStrength: 1
+    - _Opacity: 0.56
     - _OpaqueCullMode: 2
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
@@ -312,7 +313,7 @@ Material:
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Tiling: {r: 20, g: 20, b: 0, a: 0}
+    - _Tiling: {r: 8, g: 12, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}

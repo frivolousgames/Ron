@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
     public bool hasKnife;
     public bool hasFists;
     public bool hasMeleeTwoHanded;
-    public bool hasDildo;
+    public bool alwaysRaised;
     public static int currentWeapon;
 
     List<bool> obtainedWeaponsList;
@@ -143,6 +143,11 @@ public class PlayerController : MonoBehaviour
     public Transform[] spentShellsSpawns;
 
     ObjectPooler pooler;
+
+    [SerializeField]
+    GameObject[] whiskeyflames;
+    [SerializeField]
+    Transform whiskeyFlameTrans;
 
     ///Vehicle Weapon
     public static int selectedVehicleWeapon;
@@ -291,6 +296,7 @@ public class PlayerController : MonoBehaviour
         obtainedWeaponsList.Insert(5, true); //Temp acoustic
         obtainedWeaponsList.Insert(6, true); //Temp punisher
         obtainedWeaponsList.Insert(7, true); //Temp uzi
+        obtainedWeaponsList.Insert(8, true); //Temp whiskey
 
         gunSmoke = PooledObjectArrays.gunsSmokesArray;
         spentShells = PooledObjectArrays.shellCasingsArray;
@@ -344,7 +350,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("hasKnife", hasKnife);
         anim.SetBool("hasFists", hasFists);
         anim.SetBool("hasMeleeTwoHanded", hasMeleeTwoHanded);
-        anim.SetBool("hasDildo", hasDildo);
+        anim.SetBool("alwaysRaised", alwaysRaised);
         anim.SetInteger("RandomSelection", randomSelection);
 
         if (!freezeMovement)
@@ -1210,7 +1216,7 @@ public class PlayerController : MonoBehaviour
         hasFists = PlayerInfo.hasFists[equippedWeapon];
         hasKnife = PlayerInfo.hasKnife[equippedWeapon];
         hasMeleeTwoHanded = PlayerInfo.hasMeleeTwoHanded[equippedWeapon];
-        hasDildo = PlayerInfo.hasDildo[equippedWeapon];
+        alwaysRaised = PlayerInfo.alwaysRaised[equippedWeapon];
         aimable = PlayerInfo.aimable[equippedWeapon];
         automatic = PlayerInfo.automatic[equippedWeapon];
         spendShells = PlayerInfo.spendShells[equippedWeapon];
@@ -1391,7 +1397,7 @@ public class PlayerController : MonoBehaviour
 
     bool WeaponAlwaysRaised()
     {
-        if (hasDildo)
+        if (alwaysRaised)
         {
             return true;
         }
@@ -1553,6 +1559,22 @@ public class PlayerController : MonoBehaviour
         {
             pooler.PoolObjects(spentShells, spentShellsSpawns[spawnIndex].position, muzzleFlash.transform.rotation, Vector3.zero);
         }
+    }
+
+    public void SpawnWhiskeyFlame()
+    {
+        GameObject selectedFlame = null;
+        foreach(GameObject w in whiskeyflames)
+        {
+            if (!w.activeInHierarchy)
+            {
+                selectedFlame = w;
+            }
+        }
+        pooler.PoolObjects(selectedFlame, whiskeyFlameTrans.position, whiskeyFlameTrans.rotation, Vector3.zero);
+        selectedFlame.transform.parent = whiskeyFlameTrans;
+        selectedFlame.transform.localScale = Vector3.one;
+        selectedFlame.SetActive(true);
     }
 
     ///Vehicle Weapons

@@ -25,6 +25,8 @@ public class PooledObjectArrays : MonoBehaviour
     GameObject[] sparkHits;
     [SerializeField]
     GameObject[] fractureHits;
+    [SerializeField]
+    GameObject[] whiskeyFlames;
 
     public static GameObject[] bulletsArray;
     public static GameObject[] bulletDustArray;
@@ -36,6 +38,7 @@ public class PooledObjectArrays : MonoBehaviour
     public static GameObject[] chunkHitsArray;
     public static GameObject[] sparkHitsArray;
     public static GameObject[] fractureHitsArray;
+    public static GameObject[] whiskeyFlamesArray;
 
     ///Generic Organs///
     [SerializeField]
@@ -149,6 +152,7 @@ public class PooledObjectArrays : MonoBehaviour
         chunkHitsArray = chunkHits;
         sparkHitsArray = sparkHits;
         fractureHitsArray = fractureHits;
+        whiskeyFlamesArray = whiskeyFlames;
 
         ///Generic Organs///
         liversArray = livers;

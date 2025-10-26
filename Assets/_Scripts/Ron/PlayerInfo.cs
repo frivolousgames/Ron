@@ -19,6 +19,7 @@ public class PlayerInfo : MonoBehaviour
     int acousticID = 6;
     int punisherID = 7;
     int uziID = 8;
+    int whiskeyID = 9;
 
     public static int[] weaponPower;
 
@@ -30,6 +31,7 @@ public class PlayerInfo : MonoBehaviour
     int acousticPower = 7;
     int punisherPower = 1;
     int uziPower = 4;
+    int whiskeyPower = 7;
 
     public static float[] shootWait;
 
@@ -41,6 +43,7 @@ public class PlayerInfo : MonoBehaviour
     float acousticShootWait = .257f;
     float punisherShootWait = .5715f;
     float uziShootWait = .1f;
+    float whiskeyShootWait = 0f;
 
     public static float[] raiseWait;
 
@@ -52,6 +55,7 @@ public class PlayerInfo : MonoBehaviour
     float acousticRaiseWait = .292f;
     float punisherRaiseWait = 0f;
     float uziRaiseWait = .25f;
+    float whiskeyRaiseWait = 0f;
 
     public static int[] weaponLayer;
 
@@ -63,6 +67,7 @@ public class PlayerInfo : MonoBehaviour
     int acousticLayer = 6;
     int punisherLayer = 7;
     int uziLayer = 8;
+    int whiskeyLayer = 9;
 
     public static bool[] aimable;
 
@@ -74,6 +79,7 @@ public class PlayerInfo : MonoBehaviour
     bool acousticAimable = false;
     bool punisherAimable = false;
     bool uziAimable = true;
+    bool whiskeyAimable = false;
 
     public static bool[] automatic;
 
@@ -85,6 +91,7 @@ public class PlayerInfo : MonoBehaviour
     bool acousticAuto = false;
     bool punisherAuto = false;
     bool uziAuto = true;
+    bool whiskeyAuto = true;
 
     public static int[] bulletSpawn;
 
@@ -96,6 +103,7 @@ public class PlayerInfo : MonoBehaviour
     int acousticSpawn = -1;
     int punisherSpawn = -1;
     int uziSpawn = 1;
+    int whiskeySpawn = -1;
 
     public static bool[] spendShells;
 
@@ -107,6 +115,7 @@ public class PlayerInfo : MonoBehaviour
     bool acousticSpendShells = false;
     bool punisherSpendShells = false;
     bool uziSpendShells = true;
+    bool whiskeySpendShells = false;
 
     public static bool[] hasKnife;
 
@@ -118,6 +127,7 @@ public class PlayerInfo : MonoBehaviour
     bool acousticHasKnife = false;
     bool punisherHasKnife = false;
     bool uziHasKnife = false;
+    bool whiskeyHasKnife = false;
 
 
     public static bool[] hasFists;
@@ -130,6 +140,7 @@ public class PlayerInfo : MonoBehaviour
     bool acousticHasFists = false;
     bool punisherHasFists = false;
     bool uziHasFists = false;
+    bool whiskeyHasfists = false;
 
     public static bool[] hasMeleeTwoHanded;
 
@@ -141,17 +152,19 @@ public class PlayerInfo : MonoBehaviour
     bool acousticHasMelee2 = true;
     bool punisherHasMelee2 = false;
     bool uziHasMelee2 = false;
+    bool whiskeyHasMelee2 = false;
 
-    public static bool[] hasDildo;
+    public static bool[] alwaysRaised;
 
-    bool fistsHasDildo = false;
-    bool butcherHasDildo = false;
-    bool revolverHasDildo = false;
-    bool shotgunHasDildo = false;
-    bool reamerHasDildo = false;
-    bool acousticHasDildo = false;
-    bool punisherHasDildo = true;
-    bool uziHasDildo = false;
+    bool fistsAlwaysRaised = false;
+    bool butcherAlwaysRaised = false;
+    bool revolverAlwaysRaised = false;
+    bool shotgunAlwaysRaised = false;
+    bool reamerAlwaysRaised = false;
+    bool acousticAlwaysRaised = false;
+    bool punisherAlwaysRaised = true;
+    bool uziAlwaysRaised = false;
+    bool whiskeyAlwaysRaised = false;
 
     //Vehicle Guns
 
@@ -181,7 +194,9 @@ public class PlayerInfo : MonoBehaviour
             reamerID,
             acousticID,
             punisherID,
-            uziID
+            uziID,
+            whiskeyID
+            
         };
         weaponPower = new int[]
         {
@@ -192,7 +207,8 @@ public class PlayerInfo : MonoBehaviour
             reamerPower,
             acousticPower,
             punisherPower,
-            uziPower
+            uziPower,
+            whiskeyPower
         };
         raiseWait = new float[]
         {
@@ -203,7 +219,8 @@ public class PlayerInfo : MonoBehaviour
             reamerRaiseWait,
             acousticRaiseWait,
             punisherRaiseWait,
-            uziRaiseWait
+            uziRaiseWait,
+            whiskeyRaiseWait
         };
         shootWait = new float[]
         {
@@ -214,7 +231,8 @@ public class PlayerInfo : MonoBehaviour
             reamerShootWait,
             acousticShootWait,
             punisherShootWait,
-            uziShootWait
+            uziShootWait,
+            whiskeyShootWait
         };
         weaponLayer = new int[]
         {
@@ -225,7 +243,8 @@ public class PlayerInfo : MonoBehaviour
             reamerLayer,
             acousticLayer,
             punisherLayer,
-            uziLayer
+            uziLayer,
+            whiskeyLayer
         };
 
         aimable = new bool[]
@@ -237,7 +256,8 @@ public class PlayerInfo : MonoBehaviour
             reamerAimable,
             acousticAimable,
             punisherAimable,
-            uziAimable
+            uziAimable,
+            whiskeyAimable
         };
 
         automatic = new bool[]
@@ -249,7 +269,8 @@ public class PlayerInfo : MonoBehaviour
             reamerAuto,
             acousticAuto,
             punisherAuto,
-            uziAuto
+            uziAuto,
+            whiskeyAuto
         };
 
         bulletSpawn = new int[]
@@ -261,7 +282,8 @@ public class PlayerInfo : MonoBehaviour
             reamerSpawn,
             acousticSpawn,
             punisherSpawn,
-            uziSpawn
+            uziSpawn,
+            whiskeySpawn
         };
 
         spendShells = new bool[]
@@ -273,7 +295,8 @@ public class PlayerInfo : MonoBehaviour
             reamerSpendShells,
             acousticSpendShells,
             punisherSpendShells,
-            uziSpendShells
+            uziSpendShells,
+            whiskeySpendShells
         };
 
         hasFists = new bool[]
@@ -285,7 +308,8 @@ public class PlayerInfo : MonoBehaviour
             reamerHasFists,
             acousticHasFists,
             punisherHasFists,
-            uziHasFists
+            uziHasFists,
+            whiskeyHasfists
         };
 
         hasKnife = new bool[]
@@ -297,7 +321,8 @@ public class PlayerInfo : MonoBehaviour
             reamerHasKnife,
             acousticHasKnife,
             punisherHasKnife,
-            uziHasKnife
+            uziHasKnife,
+            whiskeyHasKnife
         };
 
         hasMeleeTwoHanded = new bool[]
@@ -309,19 +334,21 @@ public class PlayerInfo : MonoBehaviour
             reamerHasMelee2,
             acousticHasMelee2,
             punisherHasMelee2,
-            uziHasMelee2
+            uziHasMelee2,
+            whiskeyHasMelee2
         };
 
-        hasDildo = new bool[]
+        alwaysRaised = new bool[]
         {
-            fistsHasDildo,
-            butcherHasDildo,
-            revolverHasDildo,
-            shotgunHasDildo,
-            reamerHasDildo,
-            acousticHasDildo,
-            punisherHasDildo,
-            uziHasDildo
+            fistsAlwaysRaised,
+            butcherAlwaysRaised,
+            revolverAlwaysRaised,
+            shotgunAlwaysRaised,
+            reamerAlwaysRaised,
+            acousticAlwaysRaised,
+            punisherAlwaysRaised,
+            uziAlwaysRaised,
+            whiskeyAlwaysRaised
         };
 
         vehicleWeaponID = new int[]
