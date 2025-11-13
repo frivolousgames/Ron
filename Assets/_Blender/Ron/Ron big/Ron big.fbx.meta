@@ -107,6 +107,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Teeth
+    second: {fileID: 2100000, guid: 010633c2980da0648910b3b0da0341c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Undie band
     second: {fileID: 2100000, guid: eca741a4b327d084890f8a5f4621a41e, type: 2}
   - first:
@@ -162,7 +167,7 @@ ModelImporter:
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
+    importCameras: 0
     importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2

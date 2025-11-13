@@ -8,14 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Walls Off White Creep
-  m_Shader: {fileID: -6465566751694194690, guid: 4396f5b6a8e8cb24a921013ac4cb315a,
+  m_Shader: {fileID: -6465566751694194690, guid: 52b3e3bdec3667849829c4091411e064,
     type: 3}
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
   m_InvalidKeywords:
   - _NORMALMAP
   - _NORMALMAP_TANGENT_SPACE
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2225
@@ -58,6 +58,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 4f3c2af3b89bb3f49913d2533ab4342c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Dirt_Normal:
+        m_Texture: {fileID: 2800000, guid: 760f0fbc8a9c6d745b41609f7816af27, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Dirt_Texture:
+        m_Texture: {fileID: 2800000, guid: 4f3c2af3b89bb3f49913d2533ab4342c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissiveColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -80,6 +88,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: c89d48ece45241b43a1a2beaca9f7528, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -108,6 +120,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Texture:
         m_Texture: {fileID: 2800000, guid: cddc8210122bef4478ef09e5f386c65b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture_AO:
+        m_Texture: {fileID: 2800000, guid: 19f486850e88bff45af49052cbafe5a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ThicknessMap:
@@ -156,6 +172,7 @@ Material:
     - _BlendMode: 0
     - _CoatMask: 0
     - _ConservativeDepthOffsetEnable: 0
+    - _Contrast: 1.29
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
@@ -165,8 +182,12 @@ Material:
     - _DetailSmoothnessScale: 1
     - _DiffusionProfile: 0
     - _DiffusionProfileHash: 0
-    - _DirtOpacity: 1.12
+    - _DirtMix: 0
+    - _DirtOpacity: 0
     - _DirtSize: 0.06
+    - _Dirt_Offset: 0.79
+    - _Dirt_Opacity: 0
+    - _Dirt_Size: -0.09
     - _DisplacementLockObjectScale: 1
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
@@ -182,6 +203,7 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
+    - _Final_Color_Transition: 0
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 0
@@ -202,7 +224,8 @@ Material:
     - _MetallicRemapMin: 0
     - _NormalMapSpace: 0
     - _NormalScale: 0.4
-    - _NormalStrength: 3.46
+    - _NormalStrength: 1
+    - _Normal_Strength: 1
     - _ObjectSpaceUVMapping: 0
     - _ObjectSpaceUVMappingEmissive: 0
     - _OpaqueCullMode: 2
@@ -217,7 +240,8 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Smoothness: 0.72
+    - _Saturation: 0.31
+    - _Smoothness: 0.69
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1
@@ -240,6 +264,7 @@ Material:
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
     - _Thickness: 1
+    - _Transition: -0
     - _TransmissionEnable: 1
     - _TransmissionMask: 1
     - _TransparentBackfaceEnable: 0
@@ -262,19 +287,23 @@ Material:
     - _BaseColor: {r: 0.90382564, g: 0.9245283, b: 0.7884656, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Center: {r: 5.83, g: 5.32, b: 0, a: 0}
-    - _Color: {r: 0.90382564, g: 0.9245283, b: 0.7884656, a: 1}
+    - _Color: {r: 2.8221653, g: 2.7184198, b: 0.5990446, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
-    - _DirtColor: {r: 0.7924528, g: 0.7913532, b: 0.7214311, a: 0}
+    - _DirtColor: {r: 0.8396226, g: 0.8396226, b: 0.37624598, a: 0.8666667}
+    - _Dirt_Color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
+    - _Final_Color: {r: 0.65386254, g: 0.6179245, b: 1, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Offset: {r: 0.79, g: 0, b: 0, a: 0}
+    - _Offset: {r: 0.7, g: 0.15, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TextureColor: {r: 0.8666667, g: 0.8666667, b: 0.43921566, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Tiling: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _Tile: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _Tiling: {r: 0.25, g: 0.25, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}

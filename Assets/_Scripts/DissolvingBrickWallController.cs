@@ -29,6 +29,7 @@ public class DissolvingBrickWallController : MonoBehaviour
                 brickRemnants.SetActive(true);
                 particles.SetActive(true);
                 isDissolving = true;
+                Debug.Log("Dissolving");
             }
         }
     }
